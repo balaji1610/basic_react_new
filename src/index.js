@@ -5,11 +5,15 @@ import ReactDOM from "react-dom";
 import Home from "./Components/Home";
 
 import FunctionComponent from "./Components/FunctionComponent";
+
+import Props from "./Components/Props";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<Home />, document.getElementById("root"));
 
 ReactDOM.render (<FunctionComponent/>,document.getElementById("FunctionComponent"));
+
+ReactDOM.render (<Props name="balaji" developer="MERN" />,document.getElementById("Props"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
