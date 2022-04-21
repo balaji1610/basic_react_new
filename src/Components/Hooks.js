@@ -30,8 +30,8 @@ const afterClick = function (){
 
 return(
 
-    <div>
-
+   
+<section name="Hooks">
 <div class="card cardC" >
   <img src={myself.image} class="card-img-top " alt="NotDisplay"/>
   <div class="card-body">
@@ -41,11 +41,11 @@ return(
     <button  class="btn btn-primary btnAlign" onClick ={afterClick}>Hooks</button>
   </div>
 </div>
+</section>
 
 
 
-
-    </div>
+  
 )
 
 }

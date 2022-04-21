@@ -35,10 +35,6 @@ change = () => {
         
         </div>
 
-        <div>
-
-
-        </div>
 
         </section>
         
