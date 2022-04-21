@@ -3,9 +3,13 @@ import ReactDOM from "react-dom";
 // import './index.css';
 // import App from './App';
 import Home from "./Components/Home";
+
+import FunctionComponent from "./Components/Functioncomponent";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<Home />, document.getElementById("root"));
+
+ReactDOM.render (<FunctionComponent/>,document.getElementById("FunctionComponent"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
