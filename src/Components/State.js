@@ -1,4 +1,11 @@
 
+
+/*  State is what allows you to create components that are dynamic and interactive.
+ State is For manageing data */
+
+/* Super() keyword refers to the parents class it is used to call the constructor of the parent class
+ and to access the parent properties and methods */
+
 import React from "react";
 
 class State extends React.Component{
@@ -13,8 +20,6 @@ constructor(props){
         Image:"https://miro.medium.com/max/1200/1*hYSKyofnqThnPIsYRfnUUQ.png"
     };
 }
-
-
 change = () => { 
     this.setState({Name:"Node JS",Says:"Good Evening", Image:"https://www.fastcomet.com/blog/wp-content/uploads/2021/03/10-nodejs-frameworks-in-2021.png"})
 }
