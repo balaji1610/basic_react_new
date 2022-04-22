@@ -1,7 +1,11 @@
 
+/* Props we can set properies of our own custom components */
+/* Props are used to pass data */
+/* Components receive data from outside with props */
+/* Data From Props is read-only and can not be modified by a component that is receiving it from outside */
+
+
 import React from "react";
-
-
 function Props(props){
 
 

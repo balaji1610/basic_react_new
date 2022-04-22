@@ -1,3 +1,5 @@
+/* Hooks sloves the problem of code reuse across components.They are written without classes. */
+
 
 import React, { useState } from "react";
 
