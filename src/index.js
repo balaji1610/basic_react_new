@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 // import App from './App';
 import Home from "./Components/Home";
 
-import FunctionComponent from "./Components/FunctionComponent";
+import FunctionComponent from "./Components/Functioncomponent";
 
 import Props from "./Components/Props";
 
