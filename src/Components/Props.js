@@ -15,6 +15,10 @@ function Props(props){
 <div>
 
     <h1>Hello {props.name}, Is a {props.developer} Stack Developer</h1>
+    </div>
+    <div>
+
+    <h2>Hi {props.namev2},How are you ?,It's {props.say}</h2>
 </div>
 
         </section>
