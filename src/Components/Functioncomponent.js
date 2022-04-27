@@ -18,21 +18,51 @@ var today = new Date();
 return time;
 }
 
-
-  function Indiantime (){
+function Indiantime (){
     var date = new Date();
     var options = {
       hour: 'numeric',
       minute: 'numeric',
-      hour12: true
+      hour12: true,
+      weekday: 'long',
     };
     var timeString = date.toLocaleString('en-US', options);
     return timeString;
 
   }
 
- 
-  
+
+function IndianCurrency (){
+var amount = 12000;
+
+var options = {
+  style: 'currency',
+  currency: 'INR',
+  maximumSignificantDigits: 2
+}
+ var currency = amount.toLocaleString('en-US', options);
+ return currency;
+}
+/* https://www.digitalocean.com/community/tutorials/js-using-tolocalestring */
+
+
+function Dateformat(){
+   
+   var date = new Date();
+   
+   var options = {
+    year: 'numeric', 
+    month: '2-digit', 
+    day: '2-digit',
+    }
+   
+   var Resultdate = date.toLocaleString('en-US', options);
+   
+   
+   return Resultdate;
+   
+
+}
 return (
 
 <section className="FunctionComponent">
@@ -45,6 +75,8 @@ return (
 
         <p>{time()}</p>
         <p>{Indiantime()}</p>
+        <p>{Dateformat()}</p>
+        <p>{IndianCurrency()}</p>
         </div>
         </section>
       )

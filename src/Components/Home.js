@@ -21,10 +21,7 @@ return (
      
   
         <h1 class="basicReact">BASIC REACT</h1>
-
-
- 
-        <Props nameV1="balaji" developer="MERN"  namev2="Rio" say="Berlin"
+   <Props nameV1="balaji" developer="MERN"  namev2="Rio" say="Berlin"
          id= {Datatable[0].id} 
          name={Datatable[0].name }
         area={Datatable[0].area}
