@@ -20,19 +20,19 @@ render() {
       <div>
         <h1 class="basicReact">BASIC REACT</h1>
         <h1> Hello BALAJI</h1>
-        <h1> Hello BALAJI</h1>
+
         <button type="button" class="btn btn-primary">
           Primary
         </button>
         <Props nameV1="balaji" developer="MERN"  namev2="Rio" say="Berlin"
          id= {Datatable[0].id} 
          name={Datatable[0].name }
-          area={Datatable[0].area}
-           mobilenumber={Datatable[0].mobilenumber}
-           id1= {Datatable[1].id} 
-           name1={Datatable[1].name }
-            area1={Datatable[1].area}
-             mobilenumber1={Datatable[1].mobilenumber}
+        area={Datatable[0].area}
+        mobilenumber={Datatable[0].mobilenumber}
+        id1= {Datatable[1].id} 
+        name1={Datatable[1].name }
+        area1={Datatable[1].area}
+        mobilenumber1={Datatable[1].mobilenumber}
 
             ></Props> 
 
