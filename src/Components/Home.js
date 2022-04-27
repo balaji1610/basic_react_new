@@ -14,7 +14,11 @@ class Home extends React.Component {
           Primary
         </button>
         <Props name="balaji" developer="MERN"  namev2="Rio" say="Berlin"  />
-   
+   <hr/>
+
+   <h1>{1+1}</h1>
+   <h1>{Math.random()}</h1>
+
       </div>
     );
   }
