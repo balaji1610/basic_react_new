@@ -35,7 +35,7 @@ return time;
   
 return (
 
-<section name="FunctionComponent">
+<section className="FunctionComponent">
         <div>
         <img src = { mern } alt="mernStack" class="imgSize" /> 
 
