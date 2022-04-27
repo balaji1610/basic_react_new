@@ -15,15 +15,15 @@ render() {
   { id:"2",name:"Alex",area:"Chennai",mobilenumber:'1122334455'}];
   
 
-  
-    return (
+return (
       <div>
+      
+     
+  
         <h1 class="basicReact">BASIC REACT</h1>
-        <h1> Hello BALAJI</h1>
 
-        <button type="button" class="btn btn-primary">
-          Primary
-        </button>
+
+ 
         <Props nameV1="balaji" developer="MERN"  namev2="Rio" say="Berlin"
          id= {Datatable[0].id} 
          name={Datatable[0].name }
@@ -38,6 +38,8 @@ render() {
 
       
    <hr/>
+
+
 
    <h1>{1+1}</h1>
    <h1>{Math.random()}</h1>
