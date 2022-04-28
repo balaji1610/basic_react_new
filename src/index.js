@@ -5,16 +5,13 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-
 // import Props from "./Components/Props";
 
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-
 // ReactDOM.render (<Props name="balaji" developer="MERN" />,document.getElementById("Props"));
-
 
 // ReactDOM.render(
 //   <React.StrictMode>
