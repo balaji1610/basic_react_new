@@ -1,4 +1,4 @@
-/* Hooks sloves the problem of code reuse across components.They are written without classes. */
+/* Hooks sloves the problem of code reuse across components.They are written without classNamees. */
 
 import React, { useState } from "react";
 
@@ -24,15 +24,19 @@ function Hooks() {
 
   return (
     <section className="Hooks">
-      <div class="card cardC">
-        <img src={myself.image} class="card-img-top " alt="NotDisplay" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
+      <div className="card cardC">
+        <img
+          src={myself.image}
+          className="card-img-top "
+          alt="NotDisplay"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
             {myself.says},Hello {myself.name}
           </p>
 
-          <button class="btn btn-primary btnAlign" onClick={afterClick}>
+          <button className="btn btn-primary btnAlign" onClick={afterClick}>
             Hooks
           </button>
         </div>
