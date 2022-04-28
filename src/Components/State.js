@@ -26,7 +26,7 @@ class State extends React.Component {
   };
   render() {
     return (
-      <section name="State">
+      <section className="State">
         <div>
           <p>
             Hello {this.state.Name},{this.state.Says}

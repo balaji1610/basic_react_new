@@ -23,7 +23,7 @@ function Hooks() {
   };
 
   return (
-    <section name="Hooks">
+    <section className="Hooks">
       <div class="card cardC">
         <img src={myself.image} class="card-img-top " alt="NotDisplay" />
         <div class="card-body">
