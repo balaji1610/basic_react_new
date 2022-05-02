@@ -9,6 +9,8 @@ function FetchiapiV1() {
     })
 
     .then((parsedData) => {
+      //   const dataarray = parsedData[0].body;
+      //   console.log(dataarray);
       console.log(parsedData);
     })
 
@@ -16,7 +18,7 @@ function FetchiapiV1() {
       alert(err + "OOps something went wrong..!");
     });
 
-  return <div>Hell</div>;
+  return <div>Fetchi API V1</div>;
 }
 
 export default FetchiapiV1;

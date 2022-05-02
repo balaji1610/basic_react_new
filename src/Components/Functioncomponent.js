@@ -55,6 +55,13 @@ function FunctionComponent() {
 
     return Resultdate;
   }
+
+  // var Maparray = [1, 2, 3, 4, 5];
+  // console.log(Maparray);
+
+  // const Mapwitharray = Maparray.map;
+
+  // console.log(Mapwitharray);
   return (
     <section className="FunctionComponent">
       <div>
