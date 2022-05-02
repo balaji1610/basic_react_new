@@ -10,6 +10,7 @@ import FunctionComponent from "./Components/Functioncomponent";
 import State from "./Components/State";
 
 import Hooks from "./Components/Hooks";
+import FetchiapiV1 from "./Components/FetchiapiV1";
 
 <img src={logo} className="App-logo" alt="logo" />;
 
@@ -20,6 +21,7 @@ function App() {
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <Home></Home>
+            <FetchiapiV1></FetchiapiV1>
           </div>
           <div class="col-md-6 col-sm-6">
             <FunctionComponent></FunctionComponent>

@@ -64,8 +64,8 @@ function FunctionComponent() {
 
         <h1> {Datas}</h1>
 
-        <p>{time()}</p>
-        <p>{Indiantime()}</p>
+        <p> {time()}</p>
+        <p> {Indiantime()}</p>
         <p>{Dateformat()}</p>
         <p>{IndianCurrency()}</p>
       </div>
