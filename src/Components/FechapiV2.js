@@ -58,6 +58,8 @@ class FechapiV2 extends React.Component {
                 <th scope="col">User Name</th>
                 <th scope="col">Full Name</th>
                 <th scope="col">Email</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Company City</th>
               </tr>
             </thead>
             <tbody>
@@ -67,6 +69,8 @@ class FechapiV2 extends React.Component {
                   <td>{item.username}</td>
                   <td>{item.name}</td>
                   <td>{item.email}</td>
+                  <td>{item.company.name}</td>
+                  <td>{item.address.city}</td>
                 </tr>
               ))}
             </tbody>
