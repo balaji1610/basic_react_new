@@ -14,6 +14,8 @@ import FetchiapiV1 from "./Components/FetchiapiV1";
 
 import FetchapiV2 from "./Components/FechapiV2";
 
+import PropsChildren from "./Components/PropsChildren/PropsChildren";
+
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
             <hr />
             <Hooks></Hooks>
             <hr />
+            <PropsChildren></PropsChildren>
           </div>
         </div>
       </div>

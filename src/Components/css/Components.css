@@ -39,3 +39,12 @@
     transform: rotate(360deg);
   }
 }
+
+.parent__align {
+  border: 1px solid red;
+  background-color: #61dafb;
+}
+.Children__align {
+  display: inline-block;
+  margin: 2px;
+}
