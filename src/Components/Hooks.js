@@ -32,11 +32,15 @@ function Hooks() {
             {myself.says},Hello {myself.name}
           </p>
 
-          <button className="btn btn-primary btnAlign" onClick={afterClick}>
+          <button className="btn btn-primary btnAlign"  onClick={afterClick}>
             Hooks
           </button>
+     
         </div>
       </div>
+      
+      
+      
     </section>
   );
 }
