@@ -16,6 +16,8 @@ import FetchapiV2 from "./Components/FechapiV2";
 
 import PropsChildren from "./Components/PropsChildren/PropsChildren";
 
+import FormV1 from "./Components/Form/FormV1";
+
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
           <div class="col-md-6 col-sm-6">
             <Home></Home>
             <FetchiapiV1></FetchiapiV1>
-            <FetchapiV2></FetchapiV2>
+            <FormV1></FormV1>
           </div>
           <div class="col-md-6 col-sm-6">
             <FunctionComponent></FunctionComponent>
@@ -36,6 +38,8 @@ function App() {
             <Hooks></Hooks>
             <hr />
             <PropsChildren></PropsChildren>
+            <hr />
+            <FetchapiV2></FetchapiV2>
           </div>
         </div>
       </div>

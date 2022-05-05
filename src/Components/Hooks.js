@@ -9,7 +9,7 @@ function Hooks() {
     image:
       "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/200355617/original/57e33b448a8da9664e391a3b4e4d2f50e1d67dbe/be-your-front-end-developer.jpg",
   });
-
+  //myself -> current value ,Setmyself -> update value
   const afterClick = function () {
     Setmyself({
       says: "Good Evening",
@@ -25,11 +25,7 @@ function Hooks() {
   return (
     <section className="Hooks">
       <div className="card cardC">
-        <img
-          src={myself.image}
-          className="card-img-top "
-          alt="NotDisplay"
-        />
+        <img src={myself.image} className="card-img-top " alt="NotDisplay" />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
           <p className="card-text">
