@@ -56,6 +56,10 @@ function FunctionComponent() {
     return Resultdate;
   }
 
+  const Handleclick = () => {
+    alert("You Clicked");
+  };
+
   // var Maparray = [1, 2, 3, 4, 5];
   // console.log(Maparray);
 
@@ -75,6 +79,9 @@ function FunctionComponent() {
         <p> {Indiantime()}</p>
         <p>{Dateformat()}</p>
         <p>{IndianCurrency()}</p>
+        <button class="btn btn-primary" onClick={Handleclick}>
+          Click Here
+        </button>
       </div>
     </section>
   );
