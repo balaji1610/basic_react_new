@@ -4,12 +4,18 @@ import ReactDOM from "react-dom";
 // import App from './App';
 
 import App from "./App";
+import "./index.css";
 
 // import Props from "./Components/Props";
-
+import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
 
 // ReactDOM.render (<Props name="balaji" developer="MERN" />,document.getElementById("Props"));
 

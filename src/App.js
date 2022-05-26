@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 
 import FunctionComponent from "./Components/Functioncomponent";
@@ -18,30 +18,29 @@ import PropsChildren from "./Components/PropsChildren/PropsChildren";
 
 import FormV1 from "./Components/Form/FormV1";
 
+import Nav from "./Components/Nav";
+
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
   return (
     <div class="container bodyC">
-      <div class="col-md-12 col-sm-12">
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <Home></Home>
-            <FetchiapiV1></FetchiapiV1>
-            <FormV1></FormV1>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <FunctionComponent></FunctionComponent>
-            <hr />
-            <State></State>
-            <hr />
-            <Hooks></Hooks>
-            <hr />
-            <PropsChildren></PropsChildren>
-            <hr />
-            <FetchapiV2></FetchapiV2>
-          </div>
-        </div>
+      <div class="col-md-12 col-sm-12 nav__design">
+        {" "}
+        <Nav />
+      </div>
+
+      <div class="col-md-12 col-sm-12 pages__design">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/FetchiAPi" element={<FetchiapiV1 />} />
+          <Route path="/FetchiAPi2" element={<FetchapiV2 />} />
+          <Route path="/Form" element={<FormV1 />} />
+          <Route path="/FunctionComponent" element={<FunctionComponent />} />
+          <Route path="/State" element={<State />} />
+          <Route path="/Hooks" element={<Hooks />} />
+          <Route path="/PropsChildren" element={<PropsChildren />} />
+        </Routes>
       </div>
     </div>
   );
