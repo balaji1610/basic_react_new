@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/*Reference https://www.youtube.com/watch?v=td9A_WIKgOk*/
+
+import React, { useState, useEffect } from "react";
 
 const Counter = () => {
   const [Counter, setcounter] = useState(0);
@@ -10,6 +12,14 @@ const Counter = () => {
   const dec = () => {
     setcounter((Counter) => Counter - 1);
   };
+
+  //ComponentDidmount
+  //ComponentDidUpdate
+  //
+  useEffect(() => {
+    console.log("UseEffect");
+  }, []);
+
   return (
     <div>
       <h1>Counter</h1>
