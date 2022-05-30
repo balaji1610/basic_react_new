@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 import Counter from "./Counter";
+import StaticApi from "./Useeffect";
 
 function Hooks() {
   const [myself, Setmyself] = useState({
@@ -45,6 +46,7 @@ function Hooks() {
       <section className="Counter__Hook">
         <Counter />
       </section>
+      <StaticApi />
     </div>
   );
 }
