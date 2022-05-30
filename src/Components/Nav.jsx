@@ -69,6 +69,14 @@ function Nav() {
             </button>
           </Link>
         </a>
+        <a class="nav-link ">
+          <Link to="/List">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              List
+            </button>
+          </Link>
+        </a>
         <div class="dropdown">
           <a
             class="btn btn-secondary dropdown-toggle"

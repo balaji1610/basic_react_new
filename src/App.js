@@ -19,6 +19,7 @@ import PropsChildren from "./Components/PropsChildren/PropsChildren";
 import FormV1 from "./Components/Form/FormV1";
 
 import Nav from "./Components/Nav";
+import Lists from "./Components/Lists";
 
 <img src={logo} className="App-logo" alt="logo" />;
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/State" element={<State />} />
           <Route path="/Hooks" element={<Hooks />} />
           <Route path="/PropsChildren" element={<PropsChildren />} />
+          <Route path="/List" element={<Lists />} />
         </Routes>
       </div>
     </div>
