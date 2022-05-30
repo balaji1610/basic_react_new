@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import Counter from "./Counter";
+
 function Hooks() {
   const [myself, Setmyself] = useState({
     says: "Good Morning",
@@ -23,25 +25,27 @@ function Hooks() {
   };
 
   return (
-    <section className="Hooks">
-      <div className="card cardC">
-        <img src={myself.image} className="card-img-top " alt="NotDisplay" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            {myself.says},Hello {myself.name}
-          </p>
+    <div>
+      <section className="Hooks">
+        <div className="card cardC">
+          <img src={myself.image} className="card-img-top " alt="NotDisplay" />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">
+              {myself.says},Hello {myself.name}
+            </p>
 
-          <button className="btn btn-primary btnAlign"  onClick={afterClick}>
-            Hooks
-          </button>
-     
+            <button className="btn btn-primary btnAlign" onClick={afterClick}>
+              Hooks
+            </button>
+          </div>
         </div>
-      </div>
-      
-      
-      
-    </section>
+      </section>
+
+      <section className="Counter__Hook">
+        <Counter />
+      </section>
+    </div>
   );
 }
 
