@@ -24,7 +24,7 @@ function Hooks() {
       window.location.reload();
     }, 1000);
   };
-
+  const [Content, Notcontent] = useState(["one", "two", "three"]);
   return (
     <div>
       <section className="Hooks">
@@ -41,6 +41,12 @@ function Hooks() {
             </button>
           </div>
         </div>
+      </section>
+      <section>
+        {Content.map((value, id) => {
+          console.log(value);
+          return <p key={id}>{value}</p>;
+        })}
       </section>
 
       <section className="Counter__Hook">

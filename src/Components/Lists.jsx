@@ -1,7 +1,8 @@
 import react from "react";
 
 const Lists = () => {
-  var array = ["Balaji", "Alex", "Chitra", "Berlin", "Denver"];
+  var data = "Hello balji";
+  var array = ["Balaji", "Alex", "Chitra", "Berlin", "Denver", `${data}`];
 
   const Member = (props) => {
     return <li>Good Morning {props.members} </li>;
