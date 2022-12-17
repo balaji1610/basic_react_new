@@ -69,11 +69,20 @@ function Nav() {
             </button>
           </Link>
         </a>
+
         <a class="nav-link ">
-          <Link to="/List">
+          <Link to="/PropsChildren">
             {" "}
             <button type="button" class="btn btn-outline-primary">
-              List
+              PropsChildren
+            </button>
+          </Link>
+        </a>
+        <a class="nav-link ">
+          <Link to="/Quiz">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              Quiz
             </button>
           </Link>
         </a>
