@@ -1,17 +1,30 @@
 // Questions
-// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
 
 export default function Quiz() {
-  const PhoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-  const FirstNumber = PhoneNumber.slice(0, 3);
-
-  const SecondNumber = PhoneNumber.slice(3, 7);
-
-  const ThirdNumber = PhoneNumber.slice(7, 10);
+  // createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+  const createPhoneNumber = (str) => {
+    let obj = [];
+    const str2 = str.toLowerCase();
+    for (let char of str2) {
+      if (obj[char]) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;
+      }
+    }
+    return obj;
+  };
+  //Object to map
+  let array = Object.entries(createPhoneNumber("abcdaaaa"));
 
   return (
     <div>
-      "({FirstNumber}) {SecondNumber} -{ThirdNumber}"{" "}
+      <section>
+        <p>String Count</p>
+        {array.map((item) => {
+          return item;
+        })}
+      </section>
     </div>
   );
 }
