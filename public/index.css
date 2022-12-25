@@ -1,13 +1,18 @@
-.bodyC{
-
-    padding-top:25px;
+.bodyC {
+  padding-top: 25px;
 }
 
-.cardC{
-
-    width: 18rem;
+.cardC {
+  width: 18rem;
 }
-.btnAlign{
+.btnAlign {
+  text-align: center;
+}
 
-    text-align: center;
+.fetchapi {
+  border: 1px solid #000000;
+}
+.fetch {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
 }

@@ -1,3 +1,4 @@
+import Loaderapi from "./Api/Loaderapi";
 function FetchiapiV1() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => {
@@ -18,7 +19,12 @@ function FetchiapiV1() {
       alert(err + "OOps something went wrong..!");
     });
 
-  return <div>Fetchi API V1</div>;
+  return (
+    <div>
+      Fetchi API V1
+      <Loaderapi></Loaderapi>
+    </div>
+  );
 }
 
 export default FetchiapiV1;
