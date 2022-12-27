@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 export default function () {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState();
+  const [search, setSearch] = useState("");
+
   const fetchData = async () => {
     setLoading(true);
 
@@ -20,9 +22,35 @@ export default function () {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const handlechange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  console.log(search, "search");
+
+  const searchFilter = () => {
+    return user.filter((el) => {
+      let nameFilter = el.name.toLowerCase();
+      let phoneFilter = el.phone.toLowerCase();
+
+      let websiteFilter = el.website.toLowerCase();
+
+      if (search === "") {
+        return el;
+      } else if (
+        [nameFilter, phoneFilter, websiteFilter].includes(search.toLowerCase())
+      ) {
+        return el;
+      }
+    });
+  };
   return (
     <div>
       Loade API
+      <div>
+        <input type="text" placeholder="Search" onChange={handlechange} />
+      </div>
       <div>
         <h1>
           {loading ? (
@@ -33,7 +61,7 @@ export default function () {
             "FetchData"
           )}
         </h1>
-        {user.map((item) => {
+        {searchFilter().map((item) => {
           //personal detils
           const { name, username, id, phone, website } = item;
           //address
