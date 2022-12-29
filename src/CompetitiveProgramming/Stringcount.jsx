@@ -1,6 +1,6 @@
 // Questions
 
-export default function Quiz() {
+export default function Stringcount() {
   // createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
   const createPhoneNumber = (str) => {
     let obj = [];
@@ -20,7 +20,6 @@ export default function Quiz() {
   return (
     <div>
       <section>
-        <p>String Count</p>
         {array.map((item) => {
           return item;
         })}

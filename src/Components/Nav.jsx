@@ -79,10 +79,10 @@ function Nav() {
           </Link>
         </a>
         <a class="nav-link ">
-          <Link to="/Quiz">
+          <Link to="/Competitiveprogramming">
             {" "}
             <button type="button" class="btn btn-outline-primary">
-              Quiz
+              Competitive Programming
             </button>
           </Link>
         </a>

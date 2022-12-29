@@ -21,7 +21,7 @@ import FormV1 from "./Components/Form/FormV1";
 import Nav from "./Components/Nav";
 import Lists from "./Components/Lists";
 
-import Quiz from "./CompetitiveProgramming/quiz";
+import Program from "./CompetitiveProgramming/Program/Program";
 
 <img src={logo} className="App-logo" alt="logo" />;
 
@@ -45,7 +45,7 @@ function App() {
           <Route path="/PropsChildren" element={<PropsChildren />} />
           <Route path="/List" element={<Lists />} />
 
-          <Route path="/Quiz" element={<Quiz />} />
+          <Route path="/Competitiveprogramming" element={<Program />} />
         </Routes>
       </div>
     </div>
