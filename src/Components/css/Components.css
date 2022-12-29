@@ -59,11 +59,16 @@
 }
 .Programm_c_ui {
   border: 1px solid #000000;
-
-  display: inline-block;
   padding: 10px;
 }
 
-.Programm_c_ui > h1 {
+.Programm_c_ui > section > h5 {
   color: red;
+}
+
+.Error_msg {
+  color: red;
+}
+.Notallowed {
+  cursor: no-drop;
 }
