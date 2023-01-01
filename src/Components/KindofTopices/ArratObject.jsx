@@ -17,7 +17,12 @@ export default function ArrayObject() {
 
   const ButtonClick = () => {
     // setArrayData(...arrayData)
+
+    //end
     setClickData((clickarrayData) => [arrayData, ...clickarrayData]);
+
+    // //start
+    // setClickData((clickarrayData) => [...clickarrayData,arrayData, ]);
   };
 
   //Object Events
