@@ -29,6 +29,7 @@ function Nav() {
             </button>
           </Link>{" "}
         </a>
+
         <a class="nav-link ">
           <Link to="/Form">
             {" "}
@@ -85,6 +86,14 @@ function Nav() {
               Competitive Programming
             </button>
           </Link>
+        </a>
+        <a class="nav-link">
+          <Link to="/kindOfTopices">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              Kind Of Topices
+            </button>
+          </Link>{" "}
         </a>
         <div class="dropdown">
           <a

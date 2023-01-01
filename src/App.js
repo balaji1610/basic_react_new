@@ -22,7 +22,7 @@ import Nav from "./Components/Nav";
 import Lists from "./Components/Lists";
 
 import Program from "./CompetitiveProgramming/Program/Program";
-
+import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneousTopic";
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
@@ -46,6 +46,8 @@ function App() {
           <Route path="/List" element={<Lists />} />
 
           <Route path="/Competitiveprogramming" element={<Program />} />
+
+          <Route path="/kindOfTopices" element={<Miscellaneous />} />
         </Routes>
       </div>
     </div>
