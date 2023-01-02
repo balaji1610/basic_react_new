@@ -1,5 +1,5 @@
 import ArrayObject from "../ArratObject";
-
+import BelowAboveHundred from "../BelowAboveHundered";
 export default function miscellaneous() {
   return (
     <div>
@@ -11,7 +11,10 @@ export default function miscellaneous() {
             <ArrayObject />
           </div>
 
-          <div className="col-md-6 col-sm-6"></div>
+          <div className="col-md-6 col-sm-6 Programm_c_ui">
+            <h1>BelowAboveHundred</h1>
+            <BelowAboveHundred />
+          </div>
         </div>
       </div>
     </div>
