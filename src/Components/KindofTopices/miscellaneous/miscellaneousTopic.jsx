@@ -1,6 +1,7 @@
 import ArrayObject from "../ArratObject";
 import BelowAboveHundred from "../BelowAboveHundered";
 import MangeTwoComponent from "../MangeTwoComponents";
+import MangeMulitpleComponents from "../MangeMulitpleComponents";
 export default function miscellaneous() {
   return (
     <div>
@@ -29,7 +30,10 @@ export default function miscellaneous() {
             col-md-6
             col-sm-6
             Programm_c_ui"
-          ></div>
+          >
+            <h1>MangeMulitpleComponents</h1>
+            <MangeMulitpleComponents />
+          </div>
         </div>
       </div>
     </div>
