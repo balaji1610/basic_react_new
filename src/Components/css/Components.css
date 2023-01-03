@@ -65,10 +65,25 @@
 .Programm_c_ui > section > h5 {
   color: red;
 }
+.Programm_c_ui > h1 {
+  color: red;
+}
 
 .Error_msg {
   color: red;
 }
 .Notallowed {
   cursor: no-drop;
+}
+.RedComponent {
+  background-color: red;
+  color: #ffffff;
+}
+
+.BlueComponent {
+  background-color: blue;
+  color: #ffffff;
+}
+.Overall_Space {
+  margin-bottom: 150px;
 }
