@@ -2,6 +2,7 @@ import ArrayObject from "../ArratObject";
 import BelowAboveHundred from "../BelowAboveHundered";
 import MangeTwoComponent from "../MangeTwoComponents";
 import MangeMulitpleComponents from "../MangeMulitpleComponents";
+import NestedObjects from "../NestedObjects";
 export default function miscellaneous() {
   return (
     <div>
@@ -34,6 +35,15 @@ export default function miscellaneous() {
             <h1>MangeMulitpleComponents</h1>
             <MangeMulitpleComponents />
           </div>
+        </div>
+
+        <div class="row">
+          <div className="col-md-6 col-sm-6 Programm_c_ui">
+            <h1>Nested Objects</h1>
+            <NestedObjects />
+          </div>
+
+          <div className="col-md-6 col-sm-6"></div>
         </div>
       </div>
     </div>
