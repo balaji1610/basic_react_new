@@ -4,6 +4,7 @@ import MangeTwoComponent from "../MangeTwoComponents";
 import MangeMulitpleComponents from "../MangeMulitpleComponents";
 import NestedObjects from "../NestedObjects";
 import ObjectFncounter from "../ObjectFncounter";
+import Switch from "../Switch";
 export default function miscellaneous() {
   return (
     <div>
@@ -48,6 +49,13 @@ export default function miscellaneous() {
             <h1>ObjectFnCounter</h1>
             <ObjectFncounter />
           </div>
+        </div>
+        <div class="row">
+          <div className="col-md-6 col-sm-6 Programm_c_ui">
+            <h1>Switch</h1>
+            <Switch />
+          </div>
+          <div className="col-md-6 col-sm-6 Programm_c_ui"></div>
         </div>
       </div>
     </div>
