@@ -3,6 +3,7 @@ import BelowAboveHundred from "../BelowAboveHundered";
 import MangeTwoComponent from "../MangeTwoComponents";
 import MangeMulitpleComponents from "../MangeMulitpleComponents";
 import NestedObjects from "../NestedObjects";
+import ObjectFncounter from "../ObjectFncounter";
 export default function miscellaneous() {
   return (
     <div>
@@ -43,7 +44,10 @@ export default function miscellaneous() {
             <NestedObjects />
           </div>
 
-          <div className="col-md-6 col-sm-6"></div>
+          <div className="col-md-6 col-sm-6 Programm_c_ui">
+            <h1>ObjectFnCounter</h1>
+            <ObjectFncounter />
+          </div>
         </div>
       </div>
     </div>
