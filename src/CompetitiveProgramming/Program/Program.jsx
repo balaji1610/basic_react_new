@@ -3,6 +3,7 @@ import Maskphonenumber from "../Maskphonenumber";
 import ReverseString from "../Reversestring";
 import Wordcount from "../WordCount";
 import Revisedsequence from "../Revisedsequence";
+import StringRemove from "../StringRemove";
 export default function program() {
   return (
     <div>
@@ -49,7 +50,10 @@ export default function program() {
               <Revisedsequence />
             </section>
           </div>
-          <div className="col-md-4 col-sm-4"></div>
+          <div className="col-md-4 col-sm-4 Programm_c_ui">
+            <h1>StringRemove</h1>
+            <StringRemove />
+          </div>
         </div>
       </div>
     </div>
