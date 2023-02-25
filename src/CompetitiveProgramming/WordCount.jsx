@@ -1,5 +1,8 @@
 export default function Wordcount() {
   const checkworkcount = (el) => {
+    const check = { facebook: "facebook" };
+    const li = ["intstrage", "facebook", "twitter"];
+    console.log(check["twitter"]);
     let obj = {};
     for (let list of el.split(" ")) {
       if (obj[list]) {
