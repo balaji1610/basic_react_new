@@ -1,5 +1,6 @@
 import Loaderapi from "./Api/Loaderapi";
 import Restcountries from "./Api/Restcountries";
+import StandardFetchApi from "./Api/StandardFetchApi";
 function FetchiapiV1() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => {
@@ -26,6 +27,10 @@ function FetchiapiV1() {
       <Loaderapi></Loaderapi>
       <div>
         <Restcountries></Restcountries>
+      </div>
+      <h1>StandardFetchApi</h1>
+      <div>
+        <StandardFetchApi></StandardFetchApi>
       </div>
     </div>
   );
