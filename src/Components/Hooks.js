@@ -1,7 +1,7 @@
 /* Hooks sloves the problem of code reuse across components.They are written without classNamees. */
 
 import React, { useState } from "react";
-
+import Endpoint from "./Api/Endpoint";
 import Counter from "./Counter";
 import StaticApi from "./Useeffect";
 
@@ -53,6 +53,9 @@ function Hooks() {
         <Counter />
       </section>
       <StaticApi />
+      <section>
+        <Endpoint></Endpoint>
+      </section>
     </div>
   );
 }
