@@ -23,6 +23,7 @@ import Lists from "./Components/Lists";
 
 import Program from "./CompetitiveProgramming/Program/Program";
 import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneousTopic";
+import Firebase from "./POCFirebase/firebase";
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/Competitiveprogramming" element={<Program />} />
 
           <Route path="/kindOfTopices" element={<Miscellaneous />} />
+          <Route path="/firebase" element={<Firebase />} />
         </Routes>
       </div>
     </div>

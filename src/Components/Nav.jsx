@@ -95,6 +95,14 @@ function Nav() {
             </button>
           </Link>{" "}
         </a>
+        <a class="nav-link">
+          <Link to="/firebase">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              POC FIREBASE
+            </button>
+          </Link>{" "}
+        </a>
         <div class="dropdown">
           <a
             class="btn btn-secondary dropdown-toggle"
