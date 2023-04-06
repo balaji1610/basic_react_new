@@ -25,7 +25,7 @@ function Nav() {
           <Link to="/FetchiAPi2">
             {" "}
             <button type="button" class="btn btn-outline-primary">
-              FetchiAPi2
+              FetchiAPi23
             </button>
           </Link>{" "}
         </a>
@@ -50,7 +50,7 @@ function Nav() {
           <Link to="/State">
             {" "}
             <button type="button" class="btn btn-outline-primary">
-              State
+              States
             </button>
           </Link>
         </a>
