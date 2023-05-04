@@ -94,6 +94,12 @@ function Nav() {
               Kind Of Topices
             </button>
           </Link>{" "}
+          <Link to="/Orgin">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              REACT POC
+            </button>
+          </Link>{" "}
         </a>
         <div class="dropdown">
           <a

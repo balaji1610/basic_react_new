@@ -23,6 +23,8 @@ import Lists from "./Components/Lists";
 
 import Program from "./CompetitiveProgramming/Program/Program";
 import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneousTopic";
+
+import Orgin from "./Reactdoc/Orgin";
 <img src={logo} className="App-logo" alt="logo" />;
 
 function App() {
@@ -48,6 +50,7 @@ function App() {
           <Route path="/Competitiveprogramming" element={<Program />} />
 
           <Route path="/kindOfTopices" element={<Miscellaneous />} />
+          <Route path="/Orgin" element={<Orgin />} />
         </Routes>
       </div>
     </div>
