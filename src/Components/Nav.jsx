@@ -94,12 +94,6 @@ function Nav() {
               Kind Of Topices
             </button>
           </Link>{" "}
-          <Link to="/Orgin">
-            {" "}
-            <button type="button" class="btn btn-outline-primary">
-              REACT POC
-            </button>
-          </Link>{" "}
         </a>
         <div class="dropdown">
           <a
@@ -115,18 +109,21 @@ function Nav() {
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="#">
-                Action
+              <a class="dropdown-item">
+                <Link to="/DescribingUI">
+                  {" "}
+                  <h5>Describing UI</h5>
+                </Link>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                Another action
+                EmptyTopic
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                Something else here
+                EmptyTopic{" "}
               </a>
             </li>
           </ul>
