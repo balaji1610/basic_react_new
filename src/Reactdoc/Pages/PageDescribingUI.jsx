@@ -1,25 +1,27 @@
 import Todolist from "../Topics/DescribingUI/01/JavaScript in JSX with curly braces/Todolist";
 import MainPassingProps from "../Topics/DescribingUI/01/Passingprops/MainPassingprops";
+import Collapse from "./Accordition/Collapsed";
+import CardCollapsed from "./Accordition/CardCollapsed";
 export default function DescribingUI() {
   return (
     <div>
       <>
         {" "}
         <h1 style={{ color: "red" }}>Describing the UI</h1>
-        <div>
-          <h2>I--JavaScript in JSX with curly braces</h2>
-          <hr />
-          <div>
-            <Todolist></Todolist>
-          </div>
-        </div>
-        <div>
-          <h2>I--Passing props to a component</h2>
-          <hr />
-          <div>
-            <MainPassingProps></MainPassingProps>
-          </div>
-        </div>
+        <>
+          <CardCollapsed>
+            <Collapse
+              id="Two"
+              title="I--JavaScript in JSX with curly braces"
+              component={<Todolist />}
+            />
+            <Collapse
+              id="Three"
+              title="I--Passing props to a component"
+              component={<MainPassingProps />}
+            />
+          </CardCollapsed>
+        </>
       </>
     </div>
   );
