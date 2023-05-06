@@ -1,4 +1,5 @@
 import Todolist from "../Topics/DescribingUI/01/JavaScript in JSX with curly braces/Todolist";
+import MainPassingProps from "../Topics/DescribingUI/01/Passingprops/MainPassingprops";
 export default function DescribingUI() {
   return (
     <div>
@@ -10,6 +11,13 @@ export default function DescribingUI() {
           <hr />
           <div>
             <Todolist></Todolist>
+          </div>
+        </div>
+        <div>
+          <h2>I--Passing props to a component</h2>
+          <hr />
+          <div>
+            <MainPassingProps></MainPassingProps>
           </div>
         </div>
       </>
