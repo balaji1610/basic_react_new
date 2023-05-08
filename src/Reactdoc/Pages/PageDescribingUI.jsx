@@ -5,6 +5,10 @@ import CardCollapsed from "./Accordition/CardCollapsed";
 import ConditionalRendering from "../Topics/DescribingUI/01/ConditionAlRendering/CondtionalRendering";
 
 import RenderingList from "../Topics/DescribingUI/01/RenderingLists/RenderingList";
+
+//06
+
+import PropsTime from "../Topics/DescribingUI/06/HowPropsOverTime/PropsTime";
 export default function DescribingUI() {
   return (
     <div>
@@ -34,6 +38,19 @@ export default function DescribingUI() {
               component={<RenderingList />}
             />
           </CardCollapsed>
+        </>
+        <>
+          <h1>06</h1>
+          <CardCollapsed>
+            <Collapse
+              id="Six"
+              title="How props change over time  "
+              component={<PropsTime />}
+            />
+          </CardCollapsed>
+          <br />
+          <br />
+          <br />
         </>
       </>
     </div>
