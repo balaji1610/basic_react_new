@@ -1,7 +1,10 @@
 import Collapse from "./Accordition/Collapsed";
 import CardCollapsed from "./Accordition/CardCollapsed";
 
+//01
 import StateMemory from "../Topics/Adding Interactivity/01/StateMemory/StateMemory";
+
+import Stateassnapshot from "../Topics/Adding Interactivity/01/StateasaSnaphot/Stateassnaphot";
 
 export default function AddingInteractivity() {
   return (
@@ -14,6 +17,14 @@ export default function AddingInteractivity() {
           title="State: a component’s memory 
           "
           component={<StateMemory />}
+        />
+      </CardCollapsed>
+      <CardCollapsed>
+        <Collapse
+          id="Twoone_02"
+          title="State as a snapshot 
+          "
+          component={<Stateassnapshot />}
         />
       </CardCollapsed>
       <br /> <br />
