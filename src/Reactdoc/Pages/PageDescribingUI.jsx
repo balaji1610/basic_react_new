@@ -15,6 +15,9 @@ import ConditionalRendering2d from "../Topics/DescribingUI/07/ConditionalRenderi
 
 //8
 import Recipes from "../Topics/DescribingUI/08/Rendering Lists/Recipes";
+
+//09
+import Profiles from "../Topics/DescribingUI/09/Keeping Components Pure/Profiles";
 export default function DescribingUI() {
   return (
     <div>
@@ -72,6 +75,16 @@ export default function DescribingUI() {
               id="Eight"
               title="Extracting a list item component "
               component={<Recipes />}
+            />
+          </CardCollapsed>
+        </>
+        <>
+          <h1>09</h1>
+          <CardCollapsed>
+            <Collapse
+              id="Nine"
+              title="Keeping Components Pure "
+              component={<Profiles />}
             />
           </CardCollapsed>
         </>
