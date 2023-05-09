@@ -27,7 +27,7 @@ import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneou
 //React Doc
 
 import DescribingUI from "./Reactdoc/Pages/PageDescribingUI";
-<img src={logo} className="App-logo" alt="logo" />;
+import AddingInteractivity from "./Reactdoc/Pages/AddingInteractivity";
 
 function App() {
   return (
@@ -54,6 +54,10 @@ function App() {
           <Route path="/kindOfTopices" element={<Miscellaneous />} />
 
           <Route path="/DescribingUI" element={<DescribingUI />} />
+          <Route
+            path="/AddingInteractivity"
+            element={<AddingInteractivity />}
+          />
         </Routes>
       </div>
     </div>

@@ -117,8 +117,11 @@ function Nav() {
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
-                EmptyTopic
+              <a class="dropdown-item">
+                <Link to="/AddingInteractivity">
+                  {" "}
+                  <h5>Adding Interactivity</h5>
+                </Link>
               </a>
             </li>
             <li>
