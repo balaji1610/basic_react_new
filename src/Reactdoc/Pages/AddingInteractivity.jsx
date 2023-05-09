@@ -6,6 +6,8 @@ import StateMemory from "../Topics/Adding Interactivity/01/StateMemory/StateMemo
 
 import Stateassnapshot from "../Topics/Adding Interactivity/01/StateasaSnaphot/Stateassnaphot";
 
+import Counterder from "../Topics/Adding Interactivity/01/QueingStateupdate/Counterder";
+
 export default function AddingInteractivity() {
   return (
     <div>
@@ -27,7 +29,15 @@ export default function AddingInteractivity() {
           component={<Stateassnapshot />}
         />
       </CardCollapsed>
-      <br /> <br />
+      <CardCollapsed>
+        <Collapse
+          id="Twoone_03"
+          title="Queueing a series of state updates 
+ 
+          "
+          component={<Counterder />}
+        />
+      </CardCollapsed>
     </div>
   );
 }
