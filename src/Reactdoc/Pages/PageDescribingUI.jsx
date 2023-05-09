@@ -12,6 +12,9 @@ import PropsTime from "../Topics/DescribingUI/06/HowPropsOverTime/PropsTime";
 
 //07
 import ConditionalRendering2d from "../Topics/DescribingUI/07/ConditionalRendering/CondtionalRendering";
+
+//8
+import Recipes from "../Topics/DescribingUI/08/Rendering Lists/Recipes";
 export default function DescribingUI() {
   return (
     <div>
@@ -59,6 +62,16 @@ export default function DescribingUI() {
               id="Seven"
               title="Conditional Rendering"
               component={<ConditionalRendering2d />}
+            />
+          </CardCollapsed>
+        </>
+        <>
+          <h1>08</h1>
+          <CardCollapsed>
+            <Collapse
+              id="Eight"
+              title="Extracting a list item component "
+              component={<Recipes />}
             />
           </CardCollapsed>
         </>
