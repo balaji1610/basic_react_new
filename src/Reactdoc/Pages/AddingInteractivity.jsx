@@ -8,6 +8,7 @@ import Stateassnapshot from "../Topics/Adding Interactivity/01/StateasaSnaphot/S
 
 import Counterder from "../Topics/Adding Interactivity/01/QueingStateupdate/Counterder";
 
+import ObjectState from "../Topics/Adding Interactivity/01/UpdatingObjectsinState/ObjectState";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -38,6 +39,14 @@ export default function AddingInteractivity() {
           component={<Counterder />}
         />
       </CardCollapsed>
+      <CardCollapsed>
+        <Collapse
+          id="Twoone_04"
+          title="Updating objects in state "
+          component={<ObjectState />}
+        />
+      </CardCollapsed>
+      <br /> <br />
     </div>
   );
 }
