@@ -9,6 +9,10 @@ import Stateassnapshot from "../Topics/Adding Interactivity/01/StateasaSnaphot/S
 import Counterder from "../Topics/Adding Interactivity/01/QueingStateupdate/Counterder";
 
 import ObjectState from "../Topics/Adding Interactivity/01/UpdatingObjectsinState/ObjectState";
+
+//02
+
+import RespondingEvents from "../Topics/Adding Interactivity/02/RespondingEvents";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -46,7 +50,21 @@ export default function AddingInteractivity() {
           component={<ObjectState />}
         />
       </CardCollapsed>
-      <br /> <br />
+
+      <div>
+        <h1>Responding to Events</h1>
+        <h1>02</h1>
+        <CardCollapsed>
+          <Collapse
+            id="TwoTwo_01"
+            title="Fix an event handler
+            "
+            component={<RespondingEvents />}
+          />
+        </CardCollapsed>
+        <br />
+        <br />
+      </div>
     </div>
   );
 }
