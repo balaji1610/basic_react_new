@@ -13,6 +13,10 @@ import ObjectState from "../Topics/Adding Interactivity/01/UpdatingObjectsinStat
 //02
 
 import RespondingEvents from "../Topics/Adding Interactivity/02/RespondingEvents";
+
+//07
+
+import CopyObjects from "../Topics/Adding Interactivity/07/Copyingobjects/CopyObjects";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -60,6 +64,20 @@ export default function AddingInteractivity() {
             title="Fix an event handler
             "
             component={<RespondingEvents />}
+          />
+        </CardCollapsed>
+      </div>
+
+      <div>
+        <h1>Copying objects with the spread syntax</h1>
+        <h1>07</h1>
+        <CardCollapsed>
+          <Collapse
+            id="TwoSeven_01"
+            title="Copying objects with the spread syntax 
+
+            "
+            component={<CopyObjects />}
           />
         </CardCollapsed>
         <br />
