@@ -17,6 +17,8 @@ import RespondingEvents from "../Topics/Adding Interactivity/02/RespondingEvents
 //07
 
 import CopyObjects from "../Topics/Adding Interactivity/07/Copyingobjects/CopyObjects";
+
+import UsingSigleEventHandler from "../Topics/Adding Interactivity/07/UsingSigleEventHandler/UsingSigleEventHandler";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -74,14 +76,18 @@ export default function AddingInteractivity() {
         <CardCollapsed>
           <Collapse
             id="TwoSeven_01"
-            title="Copying objects with the spread syntax 
-
-            "
+            title="Copying objects with the spread syntax"
             component={<CopyObjects />}
           />
         </CardCollapsed>
-        <br />
-        <br />
+        <CardCollapsed>
+          <Collapse
+            id="TwoSeven_02"
+            title="Using a single event handler for multiple fields"
+            component={<UsingSigleEventHandler />}
+          />
+        </CardCollapsed>
+        <br /> <br />
       </div>
     </div>
   );
