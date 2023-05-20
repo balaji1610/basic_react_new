@@ -19,6 +19,8 @@ import RespondingEvents from "../Topics/Adding Interactivity/02/RespondingEvents
 import CopyObjects from "../Topics/Adding Interactivity/07/Copyingobjects/CopyObjects";
 
 import UsingSigleEventHandler from "../Topics/Adding Interactivity/07/UsingSigleEventHandler/UsingSigleEventHandler";
+
+import UpdatingNesedObject from "../Topics/Adding Interactivity/07/UpdatingNesedObject/UpdatingNesedObject";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -85,6 +87,13 @@ export default function AddingInteractivity() {
             id="TwoSeven_02"
             title="Using a single event handler for multiple fields"
             component={<UsingSigleEventHandler />}
+          />
+        </CardCollapsed>
+        <CardCollapsed>
+          <Collapse
+            id="TwoSeven_03"
+            title="Updating a nested object"
+            component={<UpdatingNesedObject />}
           />
         </CardCollapsed>
         <br /> <br />
