@@ -21,6 +21,9 @@ import CopyObjects from "../Topics/Adding Interactivity/07/Copyingobjects/CopyOb
 import UsingSigleEventHandler from "../Topics/Adding Interactivity/07/UsingSigleEventHandler/UsingSigleEventHandler";
 
 import UpdatingNesedObject from "../Topics/Adding Interactivity/07/UpdatingNesedObject/UpdatingNesedObject";
+
+//8
+import AddingArray from "../Topics/Adding Interactivity/08/AddingArray/AddingArray";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -96,7 +99,22 @@ export default function AddingInteractivity() {
             component={<UpdatingNesedObject />}
           />
         </CardCollapsed>
-        <br /> <br />
+      </div>
+
+      <div>
+        {" "}
+        <h1>Updating Arrays in State</h1>
+        <h1>08</h1>
+        <CardCollapsed>
+          <Collapse
+            id="TwoEight_01"
+            title="Adding to an array 
+            "
+            component={<AddingArray />}
+          />
+        </CardCollapsed>
+        <br />
+        <br />
       </div>
     </div>
   );
