@@ -24,6 +24,7 @@ import UpdatingNesedObject from "../Topics/Adding Interactivity/07/UpdatingNesed
 
 //8
 import AddingArray from "../Topics/Adding Interactivity/08/AddingArray/AddingArray";
+import RemovingArray from "../Topics/Adding Interactivity/08/RemovingArray/RemovingArray";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -111,6 +112,15 @@ export default function AddingInteractivity() {
             title="Adding to an array 
             "
             component={<AddingArray />}
+          />
+        </CardCollapsed>
+        <CardCollapsed>
+          <Collapse
+            id="TwoEight_02"
+            title="Removing from an array 
+ 
+            "
+            component={<RemovingArray />}
           />
         </CardCollapsed>
         <br />
