@@ -12,7 +12,7 @@ export default function AddingArray() {
 
   const submitData = (e) => {
     e.preventDefault();
-    setnameDetails([...nameDetails, { id: id++, name: name }]);
+    setnameDetails([{ id: id++, name: name }, ...nameDetails]);
     setName(" ");
   };
 
@@ -27,12 +27,12 @@ export default function AddingArray() {
         <br />
         <ConsaddButton type="submit" label="Add" />
       </form>
-      <ol>
+      <ul>
         {nameDetails.map((nameDetails) => {
           const { id, name } = nameDetails;
           return <li key={id}>{name}</li>;
         })}
-      </ol>
+      </ul>
     </div>
   );
 }
