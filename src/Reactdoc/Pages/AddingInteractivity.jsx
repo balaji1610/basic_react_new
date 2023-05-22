@@ -27,6 +27,8 @@ import AddingArray from "../Topics/Adding Interactivity/08/AddingArray/AddingArr
 import RemovingArray from "../Topics/Adding Interactivity/08/RemovingArray/RemovingArray";
 
 import ReplaceingArray from "../Topics/Adding Interactivity/08/ReplaceingArray/ReplaceingArray";
+
+import InsertingArray from "../Topics/Adding Interactivity/08/InsertingArray/InsertingArray";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -130,6 +132,14 @@ export default function AddingInteractivity() {
             id="TwoEight_03"
             title="Replacing items in an array"
             component={<ReplaceingArray />}
+          />
+        </CardCollapsed>
+        <CardCollapsed>
+          <Collapse
+            id="TwoEight_04"
+            title="Inserting into an array 
+            "
+            component={<InsertingArray />}
           />
         </CardCollapsed>
         <br /> <br />
