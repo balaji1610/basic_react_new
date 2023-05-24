@@ -29,6 +29,8 @@ import RemovingArray from "../Topics/Adding Interactivity/08/RemovingArray/Remov
 import ReplaceingArray from "../Topics/Adding Interactivity/08/ReplaceingArray/ReplaceingArray";
 
 import InsertingArray from "../Topics/Adding Interactivity/08/InsertingArray/InsertingArray";
+
+import ShoppingCart from "../Topics/Adding Interactivity/08/ShoppingCart/ShoppingCart";
 export default function AddingInteractivity() {
   return (
     <div>
@@ -140,6 +142,14 @@ export default function AddingInteractivity() {
             title="Inserting into an array 
             "
             component={<InsertingArray />}
+          />
+        </CardCollapsed>
+        <CardCollapsed>
+          <Collapse
+            id="TwoEight_05"
+            title="shopping cart  
+            "
+            component={<ShoppingCart />}
           />
         </CardCollapsed>
         <br /> <br />
