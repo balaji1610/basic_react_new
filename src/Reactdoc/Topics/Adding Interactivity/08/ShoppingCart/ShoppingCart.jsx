@@ -35,18 +35,28 @@ export default function ShoppingCart() {
             return (
               <li key={id}>
                 {nameed} (<b>{count}</b>){" "}
-                <ConsaddButton
-                  label="+"
-                  onClick={() => {
-                    handleIncreaseClick(id);
-                  }}
-                />
-                <ConsaddButton
-                  label="-"
-                  onClick={() => {
-                    handleDecreaseClick(id);
-                  }}
-                />
+                <div
+                  style={{ backgroundColor: "red", display: "inline-block" }}
+                >
+                  {" "}
+                  <ConsaddButton
+                    label="+"
+                    onClick={() => {
+                      handleIncreaseClick(id);
+                    }}
+                  />
+                </div>
+                &nbsp; &nbsp;
+                <div
+                  style={{ backgroundColor: "red", display: "inline-block" }}
+                >
+                  <ConsaddButton
+                    label="-"
+                    onClick={() => {
+                      handleDecreaseClick(id);
+                    }}
+                  />
+                </div>
               </li>
             );
           })}
