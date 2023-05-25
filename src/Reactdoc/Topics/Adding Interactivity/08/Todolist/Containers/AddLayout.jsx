@@ -44,18 +44,24 @@ export default function AddLayout() {
             const { id, title, done } = product;
             return (
               <>
-                <div style={{ display: "inline-block" }}>
+                <div>
                   {" "}
-                  <Checkbox
-                    checked={done}
-                    onChange={(e) => {
-                      ChangeCheckbox({ ...product, done: e.target.checked });
-                    }}
-                  />
-                </div>
-                <div style={{ display: "inline" }}>
-                  {" "}
-                  <li key={id}>{title}</li>
+                  <div className="Checkbox_2">
+                    {" "}
+                    <Checkbox
+                      checked={done}
+                      onChange={(e) => {
+                        ChangeCheckbox({ ...product, done: e.target.checked });
+                      }}
+                    />
+                  </div>{" "}
+                  <div className="Checkbox">
+                    <div key={id}>
+                      {title}
+
+                      <TodoBtn label="Edit" />
+                    </div>
+                  </div>
                 </div>
               </>
             );

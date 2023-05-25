@@ -70,3 +70,17 @@ code {
   display: inline-block;
   font-size: 16px;
 }
+
+.Checkbox {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.Checkbox_bg {
+  display: inline;
+  background-color: red;
+}
+
+.Checkbox_2 {
+  display: inline;
+}
