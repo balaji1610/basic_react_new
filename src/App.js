@@ -28,7 +28,7 @@ import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneou
 
 import DescribingUI from "./Reactdoc/Pages/PageDescribingUI";
 import AddingInteractivity from "./Reactdoc/Pages/AddingInteractivity";
-
+import ManagingState from "./Reactdoc/Pages/ManagingState";
 function App() {
   return (
     <div class="container bodyC">
@@ -58,6 +58,7 @@ function App() {
             path="/AddingInteractivity"
             element={<AddingInteractivity />}
           />
+          <Route path="/ManageingState" element={<ManagingState />} />
         </Routes>
       </div>
     </div>

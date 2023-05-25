@@ -65,7 +65,7 @@ export default function ObjectState() {
         <input type="text" value={image} onChange={handleImageChange} />
       </label>
       <hr />
-      <secion>
+      <section>
         <b>Name:</b>
         {person.name}
         <br />
@@ -77,7 +77,7 @@ export default function ObjectState() {
         <br />
 
         <img src={person.artwork.image} alt={person.name} />
-      </secion>
+      </section>
     </div>
   );
 }
