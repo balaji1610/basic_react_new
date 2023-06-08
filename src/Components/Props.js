@@ -2,12 +2,16 @@
 /* Props are used to pass data */
 /* Components receive data from outside with props */
 /* Data From Props is read-only and can not be modified by a component that is receiving it from outside */
-
+import Button from "@mui/material/Button";
 import React from "react";
 function Props(props) {
   return (
     <section className="Props">
       <div>
+        <h1>
+          {" "}
+          <Button variant="contained">Contained</Button>
+        </h1>
         <h1>
           Hello {props.nameV1}, Is a {props.developer} Stack Developer
         </h1>
