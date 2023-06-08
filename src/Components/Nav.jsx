@@ -91,7 +91,7 @@ function Nav() {
           <Link to="/kindOfTopices">
             {" "}
             <button type="button" class="btn btn-outline-primary">
-              Kind Of Topices
+              Kind Of Topicess
             </button>
           </Link>{" "}
         </a>
