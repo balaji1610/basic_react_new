@@ -134,6 +134,30 @@ function Nav() {
             </li>
           </ul>
         </div>
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Material UI
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item"></a>
+            </li>
+            <li>
+              <a class="dropdown-item"></a>
+            </li>
+            <li>
+              <a class="dropdown-item"></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );
