@@ -36,3 +36,51 @@ code {
 .button:hover > .ddd {
   display: block;
 }
+
+.avatar {
+  margin: 5px;
+  border-radius: 50%;
+}
+.panel {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+.btn_blue {
+  background-color: #1976d2; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn_red {
+  background-color: #c2185b; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.Checkbox {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.Checkbox_bg {
+  display: inline;
+  background-color: red;
+}
+
+.Checkbox_2 {
+  display: inline;
+}

@@ -104,23 +104,32 @@ function Nav() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown link
+            REACT DOC
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="#">
-                Action
+              <a class="dropdown-item">
+                <Link to="/DescribingUI">
+                  {" "}
+                  <h5>Describing UI</h5>
+                </Link>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
-                Another action
+              <a class="dropdown-item">
+                <Link to="/AddingInteractivity">
+                  {" "}
+                  <h5>Adding Interactivity</h5>
+                </Link>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
-                Something else here
+              <a class="dropdown-item">
+                <Link to="/ManageingState">
+                  {" "}
+                  <h5>ManageingState</h5>
+                </Link>
               </a>
             </li>
           </ul>

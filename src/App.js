@@ -23,8 +23,12 @@ import Lists from "./Components/Lists";
 
 import Program from "./CompetitiveProgramming/Program/Program";
 import Miscellaneous from "./Components/KindofTopices/miscellaneous/miscellaneousTopic";
-<img src={logo} className="App-logo" alt="logo" />;
 
+//React Doc
+
+import DescribingUI from "./Reactdoc/Pages/PageDescribingUI";
+import AddingInteractivity from "./Reactdoc/Pages/AddingInteractivity";
+import ManagingState from "./Reactdoc/Pages/ManagingState";
 function App() {
   return (
     <div class="container bodyC">
@@ -48,6 +52,13 @@ function App() {
           <Route path="/Competitiveprogramming" element={<Program />} />
 
           <Route path="/kindOfTopices" element={<Miscellaneous />} />
+
+          <Route path="/DescribingUI" element={<DescribingUI />} />
+          <Route
+            path="/AddingInteractivity"
+            element={<AddingInteractivity />}
+          />
+          <Route path="/ManageingState" element={<ManagingState />} />
         </Routes>
       </div>
     </div>
