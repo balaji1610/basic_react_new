@@ -29,7 +29,6 @@ function Nav() {
             </button>
           </Link>{" "}
         </a>
-
         <a class="nav-link ">
           <Link to="/Form">
             {" "}
@@ -70,7 +69,6 @@ function Nav() {
             </button>
           </Link>
         </a>
-
         <a class="nav-link ">
           <Link to="/PropsChildren">
             {" "}
@@ -133,7 +131,8 @@ function Nav() {
               </a>
             </li>
           </ul>
-        </div>
+        </div>{" "}
+        &nbsp;&nbsp;&nbsp;
         <div class="dropdown">
           <a
             class="btn btn-secondary dropdown-toggle"
@@ -148,7 +147,12 @@ function Nav() {
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li>
-              <a class="dropdown-item"></a>
+              <a class="dropdown-item">
+                <Link to="/Layout">
+                  {" "}
+                  <h5>Layout</h5>
+                </Link>
+              </a>
             </li>
             <li>
               <a class="dropdown-item"></a>
