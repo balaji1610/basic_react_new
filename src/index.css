@@ -84,3 +84,9 @@ code {
 .Checkbox_2 {
   display: inline;
 }
+
+.divder {
+  border-bottom: 5px solid red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
