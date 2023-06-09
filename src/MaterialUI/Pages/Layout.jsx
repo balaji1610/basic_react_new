@@ -1,6 +1,7 @@
 import BoxTopic from "../Topices/LayoutTopic/BoxTopic";
 import ContainerTopic from "../Topices/LayoutTopic/ContainerTopic";
 import GridTopic from "../Topices/LayoutTopic/GridTopic";
+import StackTopic from "../Topices/LayoutTopic/StackTopic";
 export default function Layout() {
   return (
     <div>
@@ -10,6 +11,8 @@ export default function Layout() {
       <ContainerTopic />
       <h1 style={{ textAlign: "center" }}>Grid</h1>
       <GridTopic />
+      <h1 style={{ textAlign: "center" }}>Stack</h1>
+      <StackTopic />
     </div>
   );
 }

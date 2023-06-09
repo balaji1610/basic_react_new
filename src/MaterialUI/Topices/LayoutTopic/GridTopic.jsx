@@ -168,6 +168,7 @@ export default function GridTopic() {
           <div className="itemsGrid">xs=2</div>
         </Grid>
       </Grid>
+      <div className="divder"></div>
     </div>
   );
 }
