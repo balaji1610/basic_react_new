@@ -1,6 +1,9 @@
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 export default function GridTopic() {
+  const mobile = useMediaQuery("(min-width:600px)");
+
   return (
     <div>
       <h1>Grid Systems</h1>
@@ -72,16 +75,23 @@ export default function GridTopic() {
 
       <div className="divder"></div>
       <h1 style={{ textAlign: "center" }}>Flexbox</h1>
-      <Grid container columns={12} spacing={5}>
+      <Grid
+        container
+        columns={12}
+        spacing={5}
+        direction={mobile ? "row" : "column"}
+      >
         <Grid
           item
           direction="column"
           justifyContent="space-between"
           alignItems="flex-start"
           flexWrap="wrap"
+         order={mobile ? "1" : "2"}
           xs={8}
         >
           <div>
+            {console.log(mobile, "mobile")}
             <h1>App Development Done with Lastest Technology</h1>
           </div>
           <div>
@@ -94,7 +104,15 @@ export default function GridTopic() {
             <Button>contact us</Button>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid
+          container
+          direction="column"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+          alignSelf='center'
+          order={mobile ? "2" : "1"}
+          xs={4}
+        >
           <div>
             {" "}
             <img
