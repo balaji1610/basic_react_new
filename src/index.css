@@ -90,3 +90,9 @@ code {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.itemsGrid {
+  background-color: red;
+  border: 2px solid black;
+  color: #ffffff;
+}
