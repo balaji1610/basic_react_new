@@ -155,7 +155,12 @@ function Nav() {
               </a>
             </li>
             <li>
-              <a class="dropdown-item"></a>
+              <a class="dropdown-item">
+                <Link to="/Inputs">
+                  {" "}
+                  <h5>Inputs</h5>
+                </Link>
+              </a>
             </li>
             <li>
               <a class="dropdown-item"></a>

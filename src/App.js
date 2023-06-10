@@ -32,6 +32,7 @@ import ManagingState from "./Reactdoc/Pages/ManagingState";
 
 //Material Ui
 import Layout from "./MaterialUI/Pages/Layout";
+import Inputs from "./MaterialUI/Pages/Inputs";
 function App() {
   return (
     <div class="container bodyC">
@@ -64,6 +65,7 @@ function App() {
           <Route path="/ManageingState" element={<ManagingState />} />
           {/* MaterialUI */}
           <Route path="/Layout" element={<Layout />} />
+          <Route path="/Inputs" element={<Inputs />} />
         </Routes>
       </div>
     </div>
