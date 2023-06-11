@@ -4,12 +4,14 @@ export default function ConButton({
   disabled,
   variant,
   label,
-  sx,
+  style,
   size,
   color,
   onClick,
   startIcon,
   endIcon,
+  onMouseEnter,
+  onMouseLeave,
 }) {
   return (
     <>
@@ -17,11 +19,13 @@ export default function ConButton({
         disabled={disabled}
         variant={variant}
         size={size}
-        sx={sx}
+        style={style}
         color={color}
         onClick={onClick}
         startIcon={startIcon}
         endIcon={endIcon}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {label}
       </Button>
