@@ -2,9 +2,9 @@ import ConButton from "./Components/ConButton";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import DataSaverOnOutlinedIcon from "@mui/icons-material/DataSaverOnOutlined";
 import { useState } from "react";
-import IconButton from "@mui/material/IconButton";
+
 import ConIconButton from "./Components/ConIconButton";
-import Button from "@mui/material/Button";
+import InputField from "./InputField";
 export default function Buttons() {
   const [hoverd, setHoverd] = useState(false);
   const clickEvent = () => {
@@ -45,8 +45,12 @@ export default function Buttons() {
           edge="start"
           color="primary"
           onClick={IconClick}
-    
         />
+      </div>
+
+      <div>
+        <h1>Text Field</h1>
+        <InputField />
       </div>
     </div>
   );
