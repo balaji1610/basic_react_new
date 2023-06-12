@@ -96,3 +96,8 @@ code {
   border: 2px solid black;
   color: #ffffff;
 }
+
+.space {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

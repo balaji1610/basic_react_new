@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import ConIconButton from "./Components/ConIconButton";
 import InputField from "./InputField";
+import DropdownMUI from "./DropdownMUI";
 export default function Buttons() {
   const [hoverd, setHoverd] = useState(false);
   const clickEvent = () => {
@@ -51,6 +52,11 @@ export default function Buttons() {
       <div>
         <h1>Text Field</h1>
         <InputField />
+      </div>
+
+      <div>
+        <h1>DROPDOWN</h1>
+        <DropdownMUI />
       </div>
     </div>
   );
