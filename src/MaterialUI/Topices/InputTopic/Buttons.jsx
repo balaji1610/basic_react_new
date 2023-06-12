@@ -6,6 +6,7 @@ import { useState } from "react";
 import ConIconButton from "./Components/ConIconButton";
 import InputField from "./InputField";
 import DropdownMUI from "./DropdownMUI";
+import Tooltips from "./Tooltips";
 export default function Buttons() {
   const [hoverd, setHoverd] = useState(false);
   const clickEvent = () => {
@@ -24,6 +25,7 @@ export default function Buttons() {
   };
   return (
     <div>
+    
       <ConButton
         variant="contained"
         label="Hello"
@@ -38,7 +40,7 @@ export default function Buttons() {
         onMouseEnter={Mouseenter}
         onMouseLeave={Mouseleave}
       />
-      <div></div>
+      <div className="divder"></div>
       <h1>Icon Button</h1>
       <div>
         <ConIconButton
@@ -48,16 +50,22 @@ export default function Buttons() {
           onClick={IconClick}
         />
       </div>
-
+      <div className="divder"></div>
       <div>
         <h1>Text Field</h1>
         <InputField />
       </div>
-
+      <div className="divder"></div>
       <div>
         <h1>DROPDOWN</h1>
         <DropdownMUI />
       </div>
+      <div className="divder"></div>
+      <div>
+        <h1> <Tooltips /></h1>
+       
+      </div>
+      <div className="divder"></div>
     </div>
   );
 }
