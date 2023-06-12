@@ -57,7 +57,7 @@ export default function Buttons() {
       </div>
       <div className="divder"></div>
       <div>
-        <h1>DROPDOWN</h1>
+        <h1 className="primaryFont">DROPDOWN</h1>
         <DropdownMUI />
       </div>
       <div className="divder"></div>

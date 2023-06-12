@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Mono&family=Roboto+Slab:wght@700&display=swap");
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Slab", serif;
+
+}
+
+p {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+}

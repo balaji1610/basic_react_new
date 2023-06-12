@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import "./index.css";
+import "./FontsStyle.css"
 
 // import Props from "./Components/Props";
 import { BrowserRouter } from "react-router-dom";
