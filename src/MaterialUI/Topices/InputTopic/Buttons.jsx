@@ -7,6 +7,7 @@ import ConIconButton from "./Components/ConIconButton";
 import InputField from "./InputField";
 import DropdownMUI from "./DropdownMUI";
 import Tooltips from "./Tooltips";
+import AlertUI from "./AlertUI";
 export default function Buttons() {
   const [hoverd, setHoverd] = useState(false);
   const clickEvent = () => {
@@ -25,7 +26,9 @@ export default function Buttons() {
   };
   return (
     <div>
-    
+      <div>
+        <AlertUI />
+      </div>
       <ConButton
         variant="contained"
         label="Hello"
@@ -62,8 +65,10 @@ export default function Buttons() {
       </div>
       <div className="divder"></div>
       <div>
-        <h1> <Tooltips /></h1>
-       
+        <h1>
+          {" "}
+          <Tooltips />
+        </h1>
       </div>
       <div className="divder"></div>
     </div>
