@@ -8,6 +8,7 @@ import InputField from "./InputField";
 import DropdownMUI from "./DropdownMUI";
 import Tooltips from "./Tooltips";
 import AlertUI from "./AlertUI";
+import Toast from "./Toast";
 export default function Buttons() {
   const [hoverd, setHoverd] = useState(false);
   const clickEvent = () => {
@@ -26,6 +27,9 @@ export default function Buttons() {
   };
   return (
     <div>
+      <div>
+        <Toast />
+      </div>
       <div>
         <AlertUI />
       </div>
