@@ -11,13 +11,18 @@ export default function Fetchapiserver() {
     LastName: " ",
   });
 
-  const getData = async () => {
-    let getApiRes = await Services.getApi();
-    let getUserDetails = getApiRes.map((item) => item);
-    setDataArray(getUserDetails);
-  };
+  //   const getData = async () => {
+  //     let getApiRes = await Services.getApi();
+  //     let getUserDetails = getApiRes.map((item) => item);
+  //     setDataArray(getUserDetails);
+  //   };
 
   useEffect(() => {
+    async function getData() {
+      let getApiRes = await Services.getApi();
+      let getUserDetails = getApiRes.map((item) => item);
+      setDataArray(getUserDetails);
+    }
     getData();
   });
 
@@ -28,8 +33,6 @@ export default function Fetchapiserver() {
         ...prevState,
         [e.target.name]: e.target.value,
       }));
-
-  
     };
 
     const submitbtn = async (e) => {
@@ -41,13 +44,30 @@ export default function Fetchapiserver() {
       } else {
         alert("Error");
       }
-
-      //   setDataArray((dastArray) => [...dastArray, datavalue]);
     };
     return { handledAddchange, submitbtn };
   })();
 
   const { handledAddchange, submitbtn } = AddModule;
+
+  //DeleteModule
+
+  const DeleteModule = (function () {
+    const handleDeleteClick = async (getid) => {
+      //   const deleteItem = dastArray.filter((elm, index) => {
+      //     return index !== getid;
+      //   });
+
+      //   console.log(deleteItem, "deleteItem");
+
+      const deleteapiitems = await Services.deleteApi(getid);
+
+      console.log(deleteapiitems, "deleteitems");
+    };
+    return { handleDeleteClick };
+  })();
+
+  const { handleDeleteClick } = DeleteModule;
 
   return (
     <div>
@@ -86,13 +106,19 @@ export default function Fetchapiserver() {
             </tr>
           </thead>
           <tbody>
-            {dastArray.map((item) => (
+            {dastArray.map((item, index) => (
               <tr class="table-secondary">
-                <th scope="row">{item.id}</th>
+                <th scope="row">{index+1}</th>
                 <td>{item.FirstName}</td>
                 <td>{item.LastName}</td>
-                <td>EDIT</td>
-                <td>Delete</td>
+                <td>
+                  <button>EDIT</button>
+                </td>
+                <td>
+                  <button onClick={() => handleDeleteClick(item.id)}>
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
