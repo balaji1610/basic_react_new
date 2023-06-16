@@ -167,6 +167,14 @@ function Nav() {
             </li>
           </ul>
         </div>
+        <a class="nav-link ">
+          <Link to="/Fetchapiserver">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              Fetch API Server
+            </button>
+          </Link>
+        </a>
       </nav>
     </div>
   );

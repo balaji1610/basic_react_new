@@ -33,6 +33,10 @@ import ManagingState from "./Reactdoc/Pages/ManagingState";
 //Material Ui
 import Layout from "./MaterialUI/Pages/Layout";
 import Inputs from "./MaterialUI/Pages/Inputs";
+
+//Fetchapiserver
+
+import Fetchapiserver from './FetchiAPI/Fetchapiserver'
 function App() {
   return (
     <div class="container bodyC">
@@ -66,6 +70,8 @@ function App() {
           {/* MaterialUI */}
           <Route path="/Layout" element={<Layout />} />
           <Route path="/Inputs" element={<Inputs />} />
+       {/* Fetchapiserver */}
+          <Route path="/Fetchapiserver" element={<Fetchapiserver />} />
         </Routes>
       </div>
     </div>
