@@ -1,4 +1,4 @@
-export default function InputComp({ type, placeholder, value, onChange }) {
+export default function InputComp({ type, placeholder, value, onChange,name }) {
   return (
     <div>
       <input
@@ -6,6 +6,7 @@ export default function InputComp({ type, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        name={name}
       />
     </div>
   );
