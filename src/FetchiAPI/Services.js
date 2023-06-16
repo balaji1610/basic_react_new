@@ -3,7 +3,7 @@ const Services = {
     const response = fetch(`https://mockjson-0kdo.onrender.com/contacts`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "getApi");
+
         return data;
       })
       .catch((error) => {

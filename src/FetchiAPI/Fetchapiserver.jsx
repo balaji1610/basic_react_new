@@ -29,7 +29,7 @@ export default function Fetchapiserver() {
         [e.target.name]: e.target.value,
       }));
 
-      console.log(datavalue, "datavalue");
+  
     };
 
     const submitbtn = async (e) => {
@@ -48,7 +48,7 @@ export default function Fetchapiserver() {
   })();
 
   const { handledAddchange, submitbtn } = AddModule;
-  console.log(dastArray, "dastArray");
+
   return (
     <div>
       <h1>Simple Crud</h1>
