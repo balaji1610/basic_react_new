@@ -60,19 +60,25 @@ export default function Fetchapiserver() {
   const { handleDeleteClick } = DeleteModule;
 
   //Edit
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
+
   const [Editlayout, setEditLayout] = useState(false);
   const [currentId, setCurrentId] = useState();
-
+  const [EditAll, setEditAll] = useState({
+    firstName: "",
+    lastName: "",
+  });
   const EditMoudle = (function () {
     const handleEditClick = (id) => {
       setEditLayout(true);
       setCurrentId(id);
       alert(id);
       const [employee] = dastArray.filter((el) => el.id === id);
-      setFname(employee.firstName);
-      setLname(employee.lastName);
+
+      setEditAll({
+        ...EditAll,
+        firstName: employee.firstName,
+        lastName: employee.lastName,
+      });
     };
 
     const handleCancelClick = () => {
@@ -80,23 +86,16 @@ export default function Fetchapiserver() {
     };
 
     const handleEditChange = (e) => {
-      setFname(e.target.value);
+      setEditAll((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.value,
+      }));
     };
-
-    const handleLsEditChange = (e) => {
-      setLname(e.target.value);
-    };
-
-    const list = {
-      firstName: fname,
-      lastName: lname,
-    };
-    console.log(list, "list");
 
     const updatebtn = async (e) => {
       e.preventDefault();
       alert("UPDATE");
-      let updateapi = await Services.editApi(currentId, list);
+      let updateapi = await Services.editApi(currentId, EditAll);
       setCallUseEffect(callUseEffect + 1);
       console.log(updateapi, "updateapi");
     };
@@ -105,7 +104,7 @@ export default function Fetchapiserver() {
       handleEditClick,
       handleCancelClick,
       handleEditChange,
-      handleLsEditChange,
+
       updatebtn,
     };
   })();
@@ -113,7 +112,7 @@ export default function Fetchapiserver() {
     handleEditClick,
     handleCancelClick,
     handleEditChange,
-    handleLsEditChange,
+
     updatebtn,
   } = EditMoudle;
 
@@ -147,7 +146,7 @@ export default function Fetchapiserver() {
           type="text"
           placeholder="Fist Name"
           onChange={Editlayout ? handleEditChange : handledAddchange}
-          value={Editlayout ? fname : datavalue.firstName}
+          value={Editlayout ? EditAll.firstName : datavalue.firstName}
           name="firstName"
         />
 
@@ -155,8 +154,8 @@ export default function Fetchapiserver() {
         <InputComp
           type="text"
           placeholder="Last Name"
-          onChange={Editlayout ? handleLsEditChange : handledAddchange}
-          value={Editlayout ? lname : datavalue.lastName}
+          onChange={Editlayout ? handleEditChange : handledAddchange}
+          value={Editlayout ? EditAll.lastName : datavalue.lastName}
           name="lastName"
         />
 
