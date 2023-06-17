@@ -1,6 +1,6 @@
 const Services = {
   getApi: () => {
-    const response = fetch(`https://mockjson-0kdo.onrender.com/contacts`)
+    const response = fetch(`https://mockjson-e650.onrender.com/contacts`)
       .then((res) => res.json())
       .then((data) => {
         return data;
@@ -20,7 +20,7 @@ const Services = {
       },
     };
     const response = fetch(
-      `https://mockjson-0kdo.onrender.com/contacts`,
+      `https://mockjson-e650.onrender.com/contacts`,
       payloadData
     )
       .then((res) => res.json())
@@ -35,7 +35,7 @@ const Services = {
 
   deleteApi: (payload) => {
     const response = fetch(
-      `https://mockjson-0kdo.onrender.com/contacts/${payload}`,
+      `https://mockjson-e650.onrender.com/contacts/${payload}`,
       {
         method: "DELETE",
       }
@@ -60,7 +60,7 @@ const Services = {
       },
     };
     const response = fetch(
-      `https://mockjson-0kdo.onrender.com/contacts/${payload.id}`,
+      `https://mockjson-e650.onrender.com/contacts/${payload.id}`,
       payloadData
     )
       .then((res) => res.json())

@@ -7,8 +7,8 @@ export default function Fetchapiserver() {
   const [dastArray, setDataArray] = useState([]);
 
   const [datavalue, setdatavalues] = useState({
-    FirstName: " ",
-    LastName: " ",
+    firstName: " ",
+    lastName: " ",
   });
 
   //   const getData = async () => {
@@ -39,7 +39,7 @@ export default function Fetchapiserver() {
       e.preventDefault();
       let res = await Services.postApi(datavalue);
 
-      if (res.FirstName === datavalue.FirstName) {
+      if (res.firstName === datavalue.firstName) {
         alert("Success");
       } else {
         alert("Error");
@@ -79,8 +79,8 @@ export default function Fetchapiserver() {
           type="text"
           placeholder="Fist Name"
           onChange={handledAddchange}
-          value={datavalue.FirstName}
-          name="FirstName"
+          value={datavalue.firstName}
+          name="firstName"
         />
 
         <label>Last Name</label>
@@ -88,8 +88,8 @@ export default function Fetchapiserver() {
           type="text"
           placeholder="Last Name"
           onChange={handledAddchange}
-          value={datavalue.LastName}
-          name="LastName"
+          value={datavalue.lastName}
+          name="lastName"
         />
         <button type="submit">submit</button>
       </form>
@@ -108,9 +108,9 @@ export default function Fetchapiserver() {
           <tbody>
             {dastArray.map((item, index) => (
               <tr class="table-secondary">
-                <th scope="row">{index+1}</th>
-                <td>{item.FirstName}</td>
-                <td>{item.LastName}</td>
+                <th scope="row">{index + 1}</th>
+                <td>{item.firstName}</td>
+                <td>{item.lastName}</td>
                 <td>
                   <button>EDIT</button>
                 </td>
