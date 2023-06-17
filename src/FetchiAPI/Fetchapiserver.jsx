@@ -11,11 +11,6 @@ export default function Fetchapiserver() {
     lastName: " ",
   });
   const [callUseEffect, setCallUseEffect] = useState(0);
-  //   const getData = async () => {
-  //     let getApiRes = await Services.getApi();
-  //     let getUserDetails = getApiRes.map((item) => item);
-  //     setDataArray(getUserDetails);
-  //   };
 
   useEffect(() => {
     const getData = async () => {
@@ -26,13 +21,6 @@ export default function Fetchapiserver() {
     getData();
   }, [callUseEffect]);
 
-  // console.log(callUseEffect,"callUseEffect")
-
-  // setTimeout(function () {
-  //   getData();
-  // }, 1000);
-
-  //Add Moudule
   const AddModule = (function () {
     const handledAddchange = (e) => {
       setdatavalues((prevState) => ({
@@ -62,12 +50,6 @@ export default function Fetchapiserver() {
 
   const DeleteModule = (function () {
     const handleDeleteClick = async (getid) => {
-      //   const deleteItem = dastArray.filter((elm, index) => {
-      //     return index !== getid;
-      //   });
-
-      //   console.log(deleteItem, "deleteItem");
-
       const deleteapiitems = await Services.deleteApi(getid);
       setCallUseEffect(callUseEffect + 1);
       console.log(deleteapiitems, "deleteitems");
@@ -82,56 +64,82 @@ export default function Fetchapiserver() {
   const [lname, setLname] = useState("");
   const [Editlayout, setEditLayout] = useState(false);
   const [currentId, setCurrentId] = useState();
-  const handleEditClick = (id) => {
-    setEditLayout(true);
-    setCurrentId(id);
-    alert(id);
-    const [employee] = dastArray.filter((el) => el.id === id);
-    setFname(employee.firstName);
-    setLname(employee.lastName);
-  };
 
-  const handleCancelClick = () => {
-    setEditLayout(false);
-  };
+  const EditMoudle = (function () {
+    const handleEditClick = (id) => {
+      setEditLayout(true);
+      setCurrentId(id);
+      alert(id);
+      const [employee] = dastArray.filter((el) => el.id === id);
+      setFname(employee.firstName);
+      setLname(employee.lastName);
+    };
 
-  const handleEditChange = (e) => {
-    setFname(e.target.value);
-  };
+    const handleCancelClick = () => {
+      setEditLayout(false);
+    };
 
-  const handleLsEditChange = (e) => {
-    setLname(e.target.value);
-  };
+    const handleEditChange = (e) => {
+      setFname(e.target.value);
+    };
 
-  const list = {
-    firstName: fname,
-    lastName: lname,
-  };
-  console.log(list, "list");
+    const handleLsEditChange = (e) => {
+      setLname(e.target.value);
+    };
 
-  const updatebtn = async (e) => {
-    e.preventDefault();
-    alert("UPDATE");
-    let updateapi = await Services.editApi(currentId, list);
-    setCallUseEffect(callUseEffect + 1);
-    console.log(updateapi, "updateapi");
-  };
+    const list = {
+      firstName: fname,
+      lastName: lname,
+    };
+    console.log(list, "list");
+
+    const updatebtn = async (e) => {
+      e.preventDefault();
+      alert("UPDATE");
+      let updateapi = await Services.editApi(currentId, list);
+      setCallUseEffect(callUseEffect + 1);
+      console.log(updateapi, "updateapi");
+    };
+
+    return {
+      handleEditClick,
+      handleCancelClick,
+      handleEditChange,
+      handleLsEditChange,
+      updatebtn,
+    };
+  })();
+  const {
+    handleEditClick,
+    handleCancelClick,
+    handleEditChange,
+    handleLsEditChange,
+    updatebtn,
+  } = EditMoudle;
 
   const [serachArray, setserachArray] = useState([]);
   const [serach, setSearch] = useState("");
-  const [SerachLayout, setSearchLayout] = useState();
-  const changesearchText = async (e) => {
-    setSearch(e.target.value);
 
-    const SearchAPI = await Services.search(serach);
-    setserachArray(SearchAPI);
-  };
+  const SearchMoudle = (function () {
+    const changesearchText = async (e) => {
+      setSearch(e.target.value);
+
+      const SearchAPI = await Services.search(serach);
+      setserachArray(SearchAPI);
+    };
+    return { changesearchText };
+  })();
+  const { changesearchText } = SearchMoudle;
 
   return (
     <div>
       <h1>Simple Crud</h1>
       Search:
-      <InputComp type="search" placeholder="Search" onChange={changesearchText} />
+      <InputComp
+        type="search"
+        placeholder="Search"
+        onChange={changesearchText}
+      />
       <h1>{serach}</h1>
       <form>
         <label>Fist Name</label>
