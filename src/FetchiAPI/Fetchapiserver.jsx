@@ -77,17 +77,56 @@ export default function Fetchapiserver() {
 
   const { handleDeleteClick } = DeleteModule;
 
+  //Edit
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [Editlayout, setEditLayout] = useState(false);
+  const [currentId, setCurrentId] = useState();
+  const handleEditClick = (id) => {
+    setEditLayout(true);
+    setCurrentId(id);
+    alert(id);
+    const [employee] = dastArray.filter((el) => el.id === id);
+    setFname(employee.firstName);
+    setLname(employee.lastName);
+  };
+
+  const handleCancelClick = () => {
+    setEditLayout(false);
+  };
+
+  const handleEditChange = (e) => {
+    setFname(e.target.value);
+  };
+
+  const handleLsEditChange = (e) => {
+    setLname(e.target.value);
+  };
+
+  const list = {
+    firstName: fname,
+    lastName: lname,
+  };
+  console.log(list, "list");
+
+  const updatebtn = async (e) => {
+    e.preventDefault();
+    alert("UPDATE");
+    let updateapi = await Services.editApi(currentId, list);
+    setCallUseEffect(callUseEffect + 1);
+    console.log(updateapi, "updateapi");
+  };
   return (
     <div>
       <h1>Simple Crud</h1>
 
-      <form onSubmit={submitbtn}>
+      <form >
         <label>Fist Name</label>
         <InputComp
           type="text"
           placeholder="Fist Name"
-          onChange={handledAddchange}
-          value={datavalue.firstName}
+          onChange={Editlayout ? handleEditChange : handledAddchange}
+          value={Editlayout ? fname : datavalue.firstName}
           name="firstName"
         />
 
@@ -95,11 +134,23 @@ export default function Fetchapiserver() {
         <InputComp
           type="text"
           placeholder="Last Name"
-          onChange={handledAddchange}
-          value={datavalue.lastName}
+          onChange={Editlayout ? handleLsEditChange : handledAddchange}
+          value={Editlayout ? lname : datavalue.lastName}
           name="lastName"
         />
-        <button type="submit">submit</button>
+
+        {Editlayout ? (
+          <>
+            {" "}
+            <button onClick={handleCancelClick}>Cancel</button>
+            <button onClick={updatebtn}>Update</button>
+          </>
+        ) : (
+          <>
+            {" "}
+            <button onClick={submitbtn}>submit</button>
+          </>
+        )}
       </form>
 
       <div>
@@ -120,7 +171,7 @@ export default function Fetchapiserver() {
                 <td>{item.firstName}</td>
                 <td>{item.lastName}</td>
                 <td>
-                  <button>EDIT</button>
+                  <button onClick={() => handleEditClick(item.id)}>EDIT</button>
                 </td>
                 <td>
                   <button onClick={() => handleDeleteClick(item.id)}>
