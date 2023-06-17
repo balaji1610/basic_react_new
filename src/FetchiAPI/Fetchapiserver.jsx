@@ -116,11 +116,24 @@ export default function Fetchapiserver() {
     setCallUseEffect(callUseEffect + 1);
     console.log(updateapi, "updateapi");
   };
+
+  const [serachArray, setserachArray] = useState([]);
+  const [serach, setSearch] = useState("");
+  const [SerachLayout, setSearchLayout] = useState();
+  const changesearchText = async (e) => {
+    setSearch(e.target.value);
+
+    const SearchAPI = await Services.search(serach);
+    setserachArray(SearchAPI);
+  };
+
   return (
     <div>
       <h1>Simple Crud</h1>
-
-      <form >
+      Search:
+      <InputComp type="search" placeholder="Search" onChange={changesearchText} />
+      <h1>{serach}</h1>
+      <form>
         <label>Fist Name</label>
         <InputComp
           type="text"
@@ -152,7 +165,6 @@ export default function Fetchapiserver() {
           </>
         )}
       </form>
-
       <div>
         <table class="table table-primary table-striped table-bordered">
           <thead>
@@ -165,21 +177,47 @@ export default function Fetchapiserver() {
             </tr>
           </thead>
           <tbody>
-            {dastArray.map((item, index) => (
-              <tr class="table-secondary">
-                <th scope="row">{index + 1}</th>
-                <td>{item.firstName}</td>
-                <td>{item.lastName}</td>
-                <td>
-                  <button onClick={() => handleEditClick(item.id)}>EDIT</button>
-                </td>
-                <td>
-                  <button onClick={() => handleDeleteClick(item.id)}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {serach.length >= 1 ? (
+              <>
+                {serachArray.map((item, index) => (
+                  <tr class="table-secondary">
+                    <th scope="row">{index + 1}</th>
+                    <td>{item.firstName}</td>
+                    <td>{item.lastName}</td>
+                    <td>
+                      <button onClick={() => handleEditClick(item.id)}>
+                        EDIT
+                      </button>
+                    </td>
+                    <td>
+                      <button onClick={() => handleDeleteClick(item.id)}>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </>
+            ) : (
+              <>
+                {dastArray.map((item, index) => (
+                  <tr class="table-secondary">
+                    <th scope="row">{index + 1}</th>
+                    <td>{item.firstName}</td>
+                    <td>{item.lastName}</td>
+                    <td>
+                      <button onClick={() => handleEditClick(item.id)}>
+                        EDIT
+                      </button>
+                    </td>
+                    <td>
+                      <button onClick={() => handleDeleteClick(item.id)}>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </>
+            )}
           </tbody>
         </table>
       </div>

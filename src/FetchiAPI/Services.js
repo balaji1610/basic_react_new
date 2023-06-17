@@ -50,7 +50,7 @@ const Services = {
     return response;
   },
 
-  editApi: (id,payload) => {
+  editApi: (id, payload) => {
     // console.log(payload);
     const payloadData = {
       method: "PUT",
@@ -62,6 +62,20 @@ const Services = {
     const response = fetch(
       `https://mockjson-e650.onrender.com/contacts/${id}`,
       payloadData
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => {
+        return error;
+      });
+    return response;
+  },
+
+  search: (payload) => {
+    const response = fetch(
+      `https://mockjson-e650.onrender.com/contacts/?q=${payload}`
     )
       .then((res) => res.json())
       .then((data) => {
