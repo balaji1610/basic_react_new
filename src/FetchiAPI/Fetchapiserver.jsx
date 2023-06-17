@@ -10,7 +10,7 @@ export default function Fetchapiserver() {
     firstName: " ",
     lastName: " ",
   });
-
+  const [callUseEffect, setCallUseEffect] = useState(0);
   //   const getData = async () => {
   //     let getApiRes = await Services.getApi();
   //     let getUserDetails = getApiRes.map((item) => item);
@@ -18,13 +18,19 @@ export default function Fetchapiserver() {
   //   };
 
   useEffect(() => {
-    async function getData() {
+    const getData = async () => {
       let getApiRes = await Services.getApi();
       let getUserDetails = getApiRes.map((item) => item);
       setDataArray(getUserDetails);
-    }
+    };
     getData();
-  });
+  }, [callUseEffect]);
+
+  // console.log(callUseEffect,"callUseEffect")
+
+  // setTimeout(function () {
+  //   getData();
+  // }, 1000);
 
   //Add Moudule
   const AddModule = (function () {
@@ -41,10 +47,12 @@ export default function Fetchapiserver() {
 
       if (res.firstName === datavalue.firstName) {
         alert("Success");
+        setCallUseEffect(callUseEffect + 1);
       } else {
         alert("Error");
       }
     };
+
     return { handledAddchange, submitbtn };
   })();
 
@@ -61,7 +69,7 @@ export default function Fetchapiserver() {
       //   console.log(deleteItem, "deleteItem");
 
       const deleteapiitems = await Services.deleteApi(getid);
-
+      setCallUseEffect(callUseEffect + 1);
       console.log(deleteapiitems, "deleteitems");
     };
     return { handleDeleteClick };
