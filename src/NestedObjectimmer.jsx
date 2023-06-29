@@ -26,8 +26,8 @@ export default function NestedObjectimmer() {
     },
     coins: {
       ten: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: "",
+        value: "",
       },
       five: {
         numberofnotes: 2,
@@ -50,12 +50,22 @@ export default function NestedObjectimmer() {
   };
 
   const [nestedObjct, setNestedObject] = useImmer(CashCounter_Payload);
-  const handleChange = (e) => {
+  const handleChange = (e, argument) => {
     const inputValue = Number(e.target.value);
-    setNestedObject((draft) => {
-      draft.notes.fivehundered.numberofnotes = inputValue;
-      draft.notes.fivehundered.value = inputValue * 500;
-    });
+    const insertObject = {
+      500: () =>
+        setNestedObject((draft) => {
+          draft.notes.fivehundered.numberofnotes = inputValue;
+          draft.notes.fivehundered.value = inputValue * 500;
+        }),
+      10: () =>
+        setNestedObject((draft) => {
+          draft.coins.ten.numberofnotes = inputValue;
+          draft.coins.ten.value = inputValue * 10;
+        }),
+    };
+
+    return insertObject[argument]();
   };
   console.log(nestedObjct, "nestedObjct");
   return (
@@ -71,7 +81,7 @@ export default function NestedObjectimmer() {
           <input
             type="number"
             value={nestedObjct.notes.fivehundered.numberofnotes}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, 500)}
           />
         </div>
         <div>
@@ -79,6 +89,27 @@ export default function NestedObjectimmer() {
         </div>
         <div>
           <h1>{nestedObjct.notes.fivehundered.value}</h1>
+        </div>
+      </div>
+      <div className="flex_layout">
+        <div>
+          <h1>10</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.coins.ten.numberofnotes}
+            onChange={(e) => handleChange(e, 10)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.coins.ten.value}</h1>
         </div>
       </div>
     </div>
