@@ -1,55 +1,61 @@
 import { useImmer } from "use-immer";
-
+import { useState, useEffect } from "react";
 export default function NestedObjectimmer() {
   const CashCounter_Payload = {
     notes: {
       fivehundered: {
-        numberofnotes: "",
-        value: "",
+        numberofnotes: 0,
+        value: 0,
       },
       twohundered: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
       onehundered: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
       fifty: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
       twenty: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
     },
     coins: {
       ten: {
-        numberofnotes: "",
-        value: "",
+        numberofnotes: 0,
+        value: 0,
       },
       five: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
       two: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
       one: {
-        numberofnotes: 2,
-        value: 3,
+        numberofnotes: 0,
+        value: 0,
       },
     },
     total: {
-      sumoftotal: 230,
-      notes: 23,
+      sumoftotal: 0,
+      notes: 0,
       coins: 0,
     },
   };
 
   const [nestedObjct, setNestedObject] = useImmer(CashCounter_Payload);
+
+  const [ovsum, SetOvSum] = useState(0);
+
+  useEffect(() => {
+    SetOvSum(ovsum);
+  }, [ovsum]);
   const handleChange = (e, argument) => {
     const inputValue = Number(e.target.value);
     const insertObject = {
@@ -65,9 +71,28 @@ export default function NestedObjectimmer() {
         }),
     };
 
+    //TotalSum
+
     return insertObject[argument]();
   };
+
+  const handleSubmit = () => {
+    const ArrayofTotalSum = [
+      nestedObjct.notes.fivehundered.value +
+        nestedObjct.notes.twohundered.value +
+        nestedObjct.notes.onehundered.value +
+        nestedObjct.notes.fifty.value +
+        nestedObjct.notes.twenty.value +
+        nestedObjct.coins.ten.value +
+        nestedObjct.coins.five.value +
+        nestedObjct.coins.two.value +
+        nestedObjct.coins.one.value,
+    ];
+
+    SetOvSum(ArrayofTotalSum.join(""));
+  };
   console.log(nestedObjct, "nestedObjct");
+
   return (
     <div>
       <div className="flex_layout">
@@ -111,6 +136,11 @@ export default function NestedObjectimmer() {
         <div>
           <h1>{nestedObjct.coins.ten.value}</h1>
         </div>
+      </div>
+
+      <button onClick={handleSubmit}>Submit</button>
+      <div>
+        Total<h1>{ovsum}</h1>
       </div>
     </div>
   );
