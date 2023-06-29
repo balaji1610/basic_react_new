@@ -176,7 +176,7 @@ function Nav() {
           </Link>
         </a>
         <a class="nav-link ">
-          <Link to="/nestedobject">
+          <Link to="/nestedobjectimmer">
             {" "}
             <button type="button" class="btn btn-outline-primary">
               Nested Object immer

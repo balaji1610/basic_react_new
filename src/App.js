@@ -39,7 +39,7 @@ import Inputs from "./MaterialUI/Pages/Inputs";
 import Fetchapiserver from "./FetchiAPI/Fetchapiserver";
 //NestedObject Use immer
 
-import NestedObject from "./NestedObject";
+import NestedObjectimmer from "./NestedObjectimmer";
 
 function App() {
   return (
@@ -77,7 +77,7 @@ function App() {
           {/* Fetchapiserver */}
           <Route path="/Fetchapiserver" element={<Fetchapiserver />} />
           {/* NestedObject */}
-          <Route path="/nestedobject" element={<NestedObject />} />
+          <Route path="/nestedobjectimmer" element={<NestedObjectimmer />} />
         </Routes>
       </div>
     </div>
