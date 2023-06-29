@@ -101,3 +101,12 @@ code {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.flex_layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+  width: 80vh;
+}
