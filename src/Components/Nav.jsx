@@ -175,6 +175,14 @@ function Nav() {
             </button>
           </Link>
         </a>
+        <a class="nav-link ">
+          <Link to="/nestedobject">
+            {" "}
+            <button type="button" class="btn btn-outline-primary">
+              Nested Object immer
+            </button>
+          </Link>
+        </a>
       </nav>
     </div>
   );

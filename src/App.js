@@ -36,7 +36,11 @@ import Inputs from "./MaterialUI/Pages/Inputs";
 
 //Fetchapiserver
 
-import Fetchapiserver from './FetchiAPI/Fetchapiserver'
+import Fetchapiserver from "./FetchiAPI/Fetchapiserver";
+//NestedObject Use immer
+
+import NestedObject from "./NestedObject";
+
 function App() {
   return (
     <div class="container bodyC">
@@ -70,8 +74,10 @@ function App() {
           {/* MaterialUI */}
           <Route path="/Layout" element={<Layout />} />
           <Route path="/Inputs" element={<Inputs />} />
-       {/* Fetchapiserver */}
+          {/* Fetchapiserver */}
           <Route path="/Fetchapiserver" element={<Fetchapiserver />} />
+          {/* NestedObject */}
+          <Route path="/nestedobject" element={<NestedObject />} />
         </Routes>
       </div>
     </div>
