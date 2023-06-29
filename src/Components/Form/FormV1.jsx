@@ -1,19 +1,43 @@
 //https://www.geeksforgeeks.org/how-to-use-handlechange-function-in-react-component/?ref=gcse
 
-import React, { useState } from "react";
-
+import { useState } from "react";
 function FormV1() {
   let [Name, setname] = useState("");
   const [show, setShow] = useState(true);
 
   /* The handleChange() function to set a new state for input */
-  const handleChange = (event) => {
+  const handleChangedd = (event) => {
     setname(event.target.value);
   };
   function changeText(id) {
     id.innerHTML = "<h1>Hello</h1>";
   }
+  const [dataArray, setDataArray] = useState([
+    {
+      inputvalue: "",
+      produvalue: "",
+    },
+  ]);
+  console.log(dataArray, "dataArray");
 
+  const handleChange = (e, getindex) => {
+    const { name, value } = e.target;
+
+    const up = dataArray.map((elm, index) => {
+      return index === getindex ? { ...elm, [name]: value } : elm;
+    });
+    setDataArray(up);
+  };
+  const handleAddItem = () => {
+    setDataArray([...dataArray, { inputvalue: " " }]);
+  };
+
+  const handleRemoveClick = (removeindex) => {
+    const RemoveItem = dataArray.filter((elm, index) => {
+      return index !== removeindex;
+    });
+    setDataArray(RemoveItem);
+  };
   return (
     <div>
       {/* <form> */}
@@ -50,7 +74,7 @@ function FormV1() {
           <input
             type="text"
             value={Name}
-            onChange={handleChange}
+            onChange={handleChangedd}
             placeholder="Enter a text"
             class="input"
           />
@@ -58,11 +82,39 @@ function FormV1() {
           <input
             type="text"
             value={Name}
-            onChange={handleChange}
+            onChange={handleChangedd}
             placeholder="Enter a text"
             class="input"
           />
         </div>
+      </div>
+      <h1>Add LIST ITEM</h1>
+      <div>
+        {dataArray.map((el, index) => {
+          const { inputvalue, produvalue } = el;
+          return (
+            <div>
+              <input
+                type="text"
+                value={inputvalue}
+                name="inputvalue"
+                onChange={(e) => handleChange(e, index)}
+              />
+              &nbsp;&nbsp;&nbsp;
+              <input
+                type="text"
+                value={produvalue}
+                name="produvalue"
+                onChange={(e) => handleChange(e, index)}
+              />
+              <div>
+                <button onClick={() => handleRemoveClick(index)}>Remove</button>
+              </div>
+            </div>
+          );
+        })}
+
+        <button onClick={handleAddItem}>Add ITem</button>
       </div>
     </div>
   );
