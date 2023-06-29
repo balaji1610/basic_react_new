@@ -1,6 +1,8 @@
+const BASE_URL = "https://full-ancient-cornet.glitch.me/contacts";
+
 const Services = {
   getApi: () => {
-    const response = fetch(`https://mockjson-e650.onrender.com/contacts`)
+    const response = fetch(`${BASE_URL}`)
       .then((res) => res.json())
       .then((data) => {
         return data;
@@ -19,10 +21,7 @@ const Services = {
         "Content-Type": "application/json",
       },
     };
-    const response = fetch(
-      `https://mockjson-e650.onrender.com/contacts`,
-      payloadData
-    )
+    const response = fetch(`${BASE_URL}`, payloadData)
       .then((res) => res.json())
       .then((data) => {
         return data;
@@ -34,12 +33,9 @@ const Services = {
   },
 
   deleteApi: (payload) => {
-    const response = fetch(
-      `https://mockjson-e650.onrender.com/contacts/${payload}`,
-      {
-        method: "DELETE",
-      }
-    )
+    const response = fetch(`${BASE_URL}/${payload}`, {
+      method: "DELETE",
+    })
       .then((res) => res.json())
       .then((data) => {
         return data;
@@ -59,10 +55,7 @@ const Services = {
         "Content-Type": "application/json",
       },
     };
-    const response = fetch(
-      `https://mockjson-e650.onrender.com/contacts/${id}`,
-      payloadData
-    )
+    const response = fetch(`${BASE_URL}/${id}`, payloadData)
       .then((res) => res.json())
       .then((data) => {
         return data;
@@ -74,9 +67,7 @@ const Services = {
   },
 
   search: (payload) => {
-    const response = fetch(
-      `https://mockjson-e650.onrender.com/contacts/?q=${payload}`
-    )
+    const response = fetch(`${BASE_URL}?q=${payload}`)
       .then((res) => res.json())
       .then((data) => {
         return data;
