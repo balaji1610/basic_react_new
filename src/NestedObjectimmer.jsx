@@ -77,19 +77,78 @@ export default function NestedObjectimmer() {
   };
 
   const handleSubmit = () => {
+    //All currency value
+    const fivehundered = nestedObjct.notes.fivehundered.value;
+    const twohundered = nestedObjct.notes.twohundered.value;
+    const onehundered = nestedObjct.notes.onehundered.value;
+    const fifty = nestedObjct.notes.fifty.value;
+    const twenty = nestedObjct.notes.twenty.value;
+    const ten = nestedObjct.coins.ten.value;
+    const five = nestedObjct.coins.five.value;
+    const two = nestedObjct.coins.two.value;
+    const one = nestedObjct.coins.one.value;
+
+    //Only Notes
+
+    const Note_fivehundered = nestedObjct.notes.fivehundered.numberofnotes;
+    const Note_twohundered = nestedObjct.notes.twohundered.numberofnotes;
+    const Note_onehundered = nestedObjct.notes.onehundered.numberofnotes;
+    const Note_fifty = nestedObjct.notes.fifty.numberofnotes;
+    const Note_twenty = nestedObjct.notes.twenty.numberofnotes;
+
+    const Coin_Ten = nestedObjct.coins.ten.numberofnotes;
+    const Coin_Five = nestedObjct.coins.five.numberofnotes;
+    const Coin_Two = nestedObjct.coins.two.numberofnotes;
+    const Coin_One = nestedObjct.coins.one.numberofnotes;
+
+    //Array
     const ArrayofTotalSum = [
-      nestedObjct.notes.fivehundered.value +
-        nestedObjct.notes.twohundered.value +
-        nestedObjct.notes.onehundered.value +
-        nestedObjct.notes.fifty.value +
-        nestedObjct.notes.twenty.value +
-        nestedObjct.coins.ten.value +
-        nestedObjct.coins.five.value +
-        nestedObjct.coins.two.value +
-        nestedObjct.coins.one.value,
+      fivehundered,
+      twohundered,
+      onehundered,
+      fifty,
+      twenty,
+      ten,
+      five,
+      two,
+      one,
     ];
 
-    SetOvSum(ArrayofTotalSum.join(""));
+    const ArrayNumberofNotes = [
+      Note_fivehundered,
+      Note_twohundered,
+      Note_onehundered,
+      Note_onehundered,
+      Note_fifty,
+      Note_twenty,
+    ];
+
+    const ArrayNumberofCoins = [Coin_Ten, Coin_Five, Coin_Two, Coin_One];
+
+    //operations
+    const SumofArrayofTotalSum = ArrayofTotalSum.reduce((a, b) => {
+      return a + b;
+    }, 0);
+
+    const SumofArrayNumberofNotes = ArrayNumberofNotes.reduce((a, b) => {
+      return a + b;
+    }, 0);
+
+    const SumofArrayNumberofCoins = ArrayNumberofCoins.reduce((a, b) => {
+      return a + b;
+    }, 0);
+
+    {
+      /*  //React: Expected an assignment or function call and instead saw an expression implentet self exeuting fn */
+    }
+
+    (() => {
+      setNestedObject((draft) => {
+        draft.total.sumoftotal = SumofArrayofTotalSum;
+        draft.total.notes = SumofArrayNumberofNotes;
+        draft.total.coins = SumofArrayNumberofCoins;
+      });
+    })();
   };
   console.log(nestedObjct, "nestedObjct");
 
@@ -140,7 +199,14 @@ export default function NestedObjectimmer() {
 
       <button onClick={handleSubmit}>Submit</button>
       <div>
-        Total<h1>{ovsum}</h1>
+        Total<h1>{nestedObjct.total.sumoftotal}</h1>
+      </div>
+
+      <div>
+        Total Notes <h1>{nestedObjct.total.notes}</h1>
+      </div>
+      <div>
+        Total Coins <h1>{nestedObjct.total.coins}</h1>
       </div>
     </div>
   );
