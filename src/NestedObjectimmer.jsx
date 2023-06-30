@@ -51,24 +51,29 @@ export default function NestedObjectimmer() {
 
   const [nestedObjct, setNestedObject] = useImmer(CashCounter_Payload);
 
-  const [ovsum, SetOvSum] = useState(0);
-
-  useEffect(() => {
-    SetOvSum(ovsum);
-  }, [ovsum]);
+  const rupeeCoinimage = "https://img.icons8.com/fluency/48/rupee.png";
+  const [image, setImage] = useState(rupeeCoinimage);
+  const imgeListAll = [
+    "http://www.pngimagesfree.com/Money/Rupees/500-rupees-png.png",
+    "https://en.numista.com/catalogue/photos/inde/3178-original.jpg",
+  ];
   const handleChange = (e, argument) => {
     const inputValue = Number(e.target.value);
     const insertObject = {
-      500: () =>
+      500: () => {
         setNestedObject((draft) => {
           draft.notes.fivehundered.numberofnotes = inputValue;
           draft.notes.fivehundered.value = inputValue * 500;
-        }),
-      10: () =>
+        });
+        setImage(imgeListAll[0]);
+      },
+      10: () => {
         setNestedObject((draft) => {
           draft.coins.ten.numberofnotes = inputValue;
           draft.coins.ten.value = inputValue * 10;
-        }),
+        });
+        setImage(imgeListAll[1]);
+      },
     };
 
     //TotalSum
@@ -77,6 +82,7 @@ export default function NestedObjectimmer() {
   };
 
   const handleSubmit = () => {
+    setImage(rupeeCoinimage);
     //All currency value
     const fivehundered = nestedObjct.notes.fivehundered.value;
     const twohundered = nestedObjct.notes.twohundered.value;
@@ -151,9 +157,15 @@ export default function NestedObjectimmer() {
     })();
   };
   console.log(nestedObjct, "nestedObjct");
-
+  // http://www.pngimagesfree.com/Money/Rupees/500-rupees-png.png
+  //https://en.numista.com/catalogue/photos/inde/3178-original.jpg ->one ruppe
+  //src="https://img.icons8.com/fluency/48/rupee.png"
   return (
     <div>
+      <div className="image_Flex_Layout">
+        <img src={image} width="220" height="130" className="image_Align" />
+      </div>
+      {/* 500 */}
       <div className="flex_layout">
         <div>
           <h1>500</h1>

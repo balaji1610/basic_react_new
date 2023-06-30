@@ -107,6 +107,21 @@ code {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+
   height: 10vh;
   width: 80vh;
+}
+
+.image_Flex_Layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10vh;
+  margin-bottom: 20vh;
+}
+.image_Align {
+  border: 2px solid #0a58ca;
+  border-radius: 21px;
+  background-color: #f9fafb;
+  padding: 12px;
 }
