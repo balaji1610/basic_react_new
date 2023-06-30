@@ -203,9 +203,7 @@ export default function NestedObjectimmer() {
     })();
   };
   console.log(nestedObjct, "nestedObjct");
-  // http://www.pngimagesfree.com/Money/Rupees/500-rupees-png.png
-  //https://en.numista.com/catalogue/photos/inde/3178-original.jpg ->one ruppe
-  //src="https://img.icons8.com/fluency/48/rupee.png"
+
   return (
     <div>
       <div className="image_Flex_Layout">
