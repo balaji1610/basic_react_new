@@ -60,6 +60,7 @@ export default function NestedObjectimmer() {
   const handleChange = (e, argument) => {
     const inputValue = Number(e.target.value);
     const insertObject = {
+      //Notes
       500: () => {
         setNestedObject((draft) => {
           draft.notes.fivehundered.numberofnotes = inputValue;
@@ -67,12 +68,55 @@ export default function NestedObjectimmer() {
         });
         setImage(imgeListAll[0]);
       },
+      200: () => {
+        setNestedObject((draft) => {
+          draft.notes.twohundered.numberofnotes = inputValue;
+          draft.notes.twohundered.value = inputValue * 200;
+        });
+      },
+      100: () => {
+        setNestedObject((draft) => {
+          draft.notes.onehundered.numberofnotes = inputValue;
+          draft.notes.onehundered.value = inputValue * 100;
+        });
+      },
+      50: () => {
+        setNestedObject((draft) => {
+          draft.notes.fifty.numberofnotes = inputValue;
+          draft.notes.fifty.value = inputValue * 50;
+        });
+      },
+      20: () => {
+        setNestedObject((draft) => {
+          draft.notes.twenty.numberofnotes = inputValue;
+          draft.notes.twenty.value = inputValue * 20;
+        });
+      },
+      //Coins
       10: () => {
         setNestedObject((draft) => {
           draft.coins.ten.numberofnotes = inputValue;
           draft.coins.ten.value = inputValue * 10;
         });
         setImage(imgeListAll[1]);
+      },
+      5: () => {
+        setNestedObject((draft) => {
+          draft.coins.five.numberofnotes = inputValue;
+          draft.coins.five.value = inputValue * 5;
+        });
+      },
+      2: () => {
+        setNestedObject((draft) => {
+          draft.coins.two.numberofnotes = inputValue;
+          draft.coins.two.value = inputValue * 2;
+        });
+      },
+      1: () => {
+        setNestedObject((draft) => {
+          draft.coins.one.numberofnotes = inputValue;
+          draft.coins.one.value = inputValue * 1;
+        });
       },
     };
 
@@ -98,10 +142,12 @@ export default function NestedObjectimmer() {
 
     const Note_fivehundered = nestedObjct.notes.fivehundered.numberofnotes;
     const Note_twohundered = nestedObjct.notes.twohundered.numberofnotes;
+
     const Note_onehundered = nestedObjct.notes.onehundered.numberofnotes;
+
     const Note_fifty = nestedObjct.notes.fifty.numberofnotes;
     const Note_twenty = nestedObjct.notes.twenty.numberofnotes;
-
+    //coins
     const Coin_Ten = nestedObjct.coins.ten.numberofnotes;
     const Coin_Five = nestedObjct.coins.five.numberofnotes;
     const Coin_Two = nestedObjct.coins.two.numberofnotes;
@@ -124,11 +170,11 @@ export default function NestedObjectimmer() {
       Note_fivehundered,
       Note_twohundered,
       Note_onehundered,
-      Note_onehundered,
       Note_fifty,
       Note_twenty,
     ];
 
+    console.log(ArrayNumberofNotes, "ArrayNumberofNotes");
     const ArrayNumberofCoins = [Coin_Ten, Coin_Five, Coin_Two, Coin_One];
 
     //operations
@@ -187,6 +233,96 @@ export default function NestedObjectimmer() {
           <h1>{nestedObjct.notes.fivehundered.value}</h1>
         </div>
       </div>
+      {/* 200 */}
+      <div className="flex_layout">
+        <div>
+          <h1>200</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.notes.twohundered.numberofnotes}
+            onChange={(e) => handleChange(e, 200)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.notes.twohundered.value}</h1>
+        </div>
+      </div>
+      {/* 100 */}
+      <div className="flex_layout">
+        <div>
+          <h1>100</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.notes.onehundered.numberofnotes}
+            onChange={(e) => handleChange(e, 100)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.notes.onehundered.value}</h1>
+        </div>
+      </div>
+      {/* 50 */}
+      <div className="flex_layout">
+        <div>
+          <h1>50</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.notes.fifty.numberofnotes}
+            onChange={(e) => handleChange(e, 50)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.notes.fifty.value}</h1>
+        </div>
+      </div>
+      {/* 20 */}
+      <div className="flex_layout">
+        <div>
+          <h1>20</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.notes.twenty.numberofnotes}
+            onChange={(e) => handleChange(e, 20)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.notes.twenty.value}</h1>
+        </div>
+      </div>
+      <h1>Coins</h1>
+      {/* 10 */}
       <div className="flex_layout">
         <div>
           <h1>10</h1>
@@ -206,6 +342,72 @@ export default function NestedObjectimmer() {
         </div>
         <div>
           <h1>{nestedObjct.coins.ten.value}</h1>
+        </div>
+      </div>
+      {/* 5 */}
+      <div className="flex_layout">
+        <div>
+          <h1>5</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.coins.five.numberofnotes}
+            onChange={(e) => handleChange(e, 5)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.coins.five.value}</h1>
+        </div>
+      </div>
+      {/* 2 */}
+      <div className="flex_layout">
+        <div>
+          <h1>2</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.coins.two.numberofnotes}
+            onChange={(e) => handleChange(e, 2)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.coins.two.value}</h1>
+        </div>
+      </div>
+      {/* 1 */}
+      <div className="flex_layout">
+        <div>
+          <h1>1</h1>
+        </div>
+        <div>
+          <h1>*</h1>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={nestedObjct.coins.one.numberofnotes}
+            onChange={(e) => handleChange(e, 1)}
+          />
+        </div>
+        <div>
+          <h1>=</h1>
+        </div>
+        <div>
+          <h1>{nestedObjct.coins.one.value}</h1>
         </div>
       </div>
 
