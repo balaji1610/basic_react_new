@@ -23,7 +23,7 @@ export default function Maskphonenumber() {
       setError({ ...error, Notnumber: true, button: true });
       console.log("Not A Number");
     } else {
-      if (getNumber.length == 10) {
+      if (getNumber.length ===10) {
         setError({ ...error, Maximumnumber: true, button: true });
         console.log("It is a Number");
       }
