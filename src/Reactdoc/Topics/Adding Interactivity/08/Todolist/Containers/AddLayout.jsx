@@ -9,6 +9,8 @@ export default function AddLayout() {
   const [product, setProduct] = useState(List);
 
   const [title, setTitle] = useState("");
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId, seteditId] = useState(null);
 
   const changeText = (e) => {
     setTitle(e.target.value);
@@ -29,6 +31,30 @@ export default function AddLayout() {
     setProduct(updateCheckbox);
   };
 
+  const handleOnEdidUser = (id, title) => {
+    setIsEdit(true);
+    setTitle(title);
+    seteditId(id);
+  };
+
+  const handleUserUpdate = () => {
+    setProduct((prev) => {
+      return prev.map((item) => {
+        return item.id == editId ? { ...item, title: title } : item;
+      });
+    });
+    setTitle("");
+    setIsEdit(false);
+  };
+
+  const handleAllDelete = () => {
+    setProduct((prev) => {
+      return prev.filter((item) => {
+        return !item.done;
+      });
+    });
+  };
+
   return (
     <div>
       <Todoinput
@@ -36,7 +62,15 @@ export default function AddLayout() {
         value={title}
         onChange={changeText}
       />
-      <TodoBtn label="Add" onClick={handleclickEvent} />
+
+      {isEdit ? (
+        <TodoBtn label="Update" onClick={handleUserUpdate} />
+      ) : (
+        <TodoBtn label="Add" onClick={handleclickEvent} />
+      )}
+      <hr />
+      <TodoBtn label="All Delete" onClick={handleAllDelete} />
+      <hr />
       <>
         {" "}
         <ul>
@@ -59,7 +93,21 @@ export default function AddLayout() {
                     <div key={id}>
                       {title}
 
-                      <TodoBtn label="Edit" />
+                      <TodoBtn
+                        label="Edit"
+                        onClick={() => handleOnEdidUser(id, title)}
+                      />
+
+                      <TodoBtn
+                        label="Delete"
+                        onClick={() =>
+                          setProduct((prev) => {
+                            return prev.filter((item) => {
+                              return item.id != id;
+                            });
+                          })
+                        }
+                      />
                     </div>
                   </div>
                 </div>

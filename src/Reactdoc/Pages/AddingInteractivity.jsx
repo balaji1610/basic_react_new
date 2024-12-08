@@ -157,7 +157,7 @@ export default function AddingInteractivity() {
         <CardCollapsed>
           <Collapse
             id="TwoEight_06"
-            title="PENDING____Todolist  
+            title="Todolist  
             "
             component={<Todolist />}
           />
